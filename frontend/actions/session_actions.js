@@ -12,8 +12,7 @@ const logoutUser = () => ({
 });
 
 export const signUp = (formUser) => dispatch => {
-    SessionUtil.signUp(formUser).then(user => dispatch(receiveUser(user))
-    )
+    SessionUtil.signUp(formUser).then(user => dispatch(receiveUser(user)))
 };
 
 export const logIn = (formUser) => dispatch => {
