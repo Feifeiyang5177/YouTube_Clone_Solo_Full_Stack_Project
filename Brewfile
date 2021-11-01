@@ -1,0 +1,8 @@
+tap "heroku/brew"
+tap "homebrew/bundle"
+tap "homebrew/core"
+brew "git"
+brew "sqlite"
+brew "postgresql"
+brew "rbenv"
+brew "shared-mime-info"
