@@ -16,7 +16,7 @@ user2 = User.create!(username: 'Faker2', email: 'fakeuser2@gmail.com', password:
 user3 = User.create!(username: 'Faker3', email: 'fakeuser3@gmail.com', password: 333333)
 user4 = User.create!(username: 'Faker4', email: 'fakeuser4@gmail.com', password: 444444)
 
-video1 = Video.create!(title: "video1", description: "test video 1", creator_id: 1, view_count: 0)
+video1 = Video.create!(title: "video1", description: "test video 1", creator_id: user1.id, view_count: 0)
 
 
 # :title, :description, :creator_id, :view_count
