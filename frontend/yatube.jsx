@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
         store = configureStore();
     }
 
-    window.fetchVideos = fetchVideos;
-    window.store = store;
-    window.dispatch = store.dispatch;
-    window.getState = store.getState;
+    // window.fetchVideos = fetchVideos;
+    // window.store = store;
+    // window.dispatch = store.dispatch;
+    // window.getState = store.getState;
 
     ReactDOM.render(<Root store={store}/>, root);
 })
