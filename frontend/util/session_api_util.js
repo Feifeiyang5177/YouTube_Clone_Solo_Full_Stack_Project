@@ -7,6 +7,7 @@ export const logIn = (user) => (
         data: {user}
     })
 
+
 )
 
 export const logOut = () => ({
@@ -14,11 +15,12 @@ export const logOut = () => ({
     method: 'DELETE'
 
 })
-
+ 
 export const signUp = (user) => ({
     url: '/api/session',
     method: 'POST',
-    data: {user}
+    data: {user},
+    
 
 })
 
