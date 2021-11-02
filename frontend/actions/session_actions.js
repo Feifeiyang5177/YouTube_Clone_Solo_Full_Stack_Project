@@ -22,11 +22,10 @@ export const clearErrors = () => ({
 })
 
 
-export const signUp = (formUser) => dispatch => SessionUtil.signUp(formUser)
-    
-    .then(user => dispatch(receiveUser(user)),
+export const signUp = (formUser) => dispatch => (
+    SessionUtil.signUp(formUser).then(user => (dispatch(receiveUser(user))),
     errors => dispatch(receiveErrors(errors.responseJSON))
-    );
+    ));
 
 
 export const logIn = (formUser) => dispatch => {

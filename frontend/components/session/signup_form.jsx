@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+// import { Link } from 'react-router-dom';
 class SignupForm extends React.Component {
-
     constructor(props){
         super(props);
         this.state = {
@@ -19,13 +17,15 @@ class SignupForm extends React.Component {
             this.setState({[field]: e.target.value}); 
         }
     }
-
     handleSubmit(e) {
         e.preventDefault();
+        // console.log(this.state) 
         // this.props.signUp(this.state)
-        this.props.action(this.state).then(() => this.props.history.push('/'));
-    }
+        this.props.action(this.state)
+        this.props.history.push('/')
 
+        // .then(() => this.props.history.push('/'));
+    }
     renderError(errorMessages) {
         return (
             <ul className="error-message">
@@ -39,7 +39,6 @@ class SignupForm extends React.Component {
             </ul>
         )
     }
-
     render() {
         return (
             <div className="session-form">
@@ -79,8 +78,7 @@ class SignupForm extends React.Component {
                             />
                         </label>
                         { this.props.errors.length > 0 ? this.renderError(this.props.errors) : null}
-                        
-
+                    
                         <button onClick={this.handleSubmit}>Sign Up</button>
                 
                     </form>

@@ -3,10 +3,11 @@ import SignupForm from './signup_form';
 import { signUp, logIn, clearErrors} from '../../actions/session_actions';
 
 
-const mSTP = state => ({
-    errors: state.errors.session
-    // console.log(state)
-});
+const mSTP = state => {
+    console.log(state.err)
+    return {errors: state.errors.session
+    }
+};
 
 const mDTP = dispatch => ({
     action: user => dispatch(signUp(user)),
