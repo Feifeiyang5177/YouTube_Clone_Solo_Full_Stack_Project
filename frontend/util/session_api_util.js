@@ -6,21 +6,16 @@ export const logIn = (user) => (
         method: 'POST',
         data: {user}
     })
-
-
 )
 
 export const logOut = () => ({
     url: '/api/session',
     method: 'DELETE'
-
 })
  
 export const signUp = (user) => ({
     url: '/api/session',
     method: 'POST',
-    data: {user},
-    
-
+    data: {user}
 })
 

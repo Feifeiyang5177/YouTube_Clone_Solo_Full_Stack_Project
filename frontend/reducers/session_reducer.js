@@ -8,7 +8,7 @@ const _nullSession = {
 const sessionReducer = (oldState = _nullSession, action) => {
     Object.freeze(oldState);
     let newState = Object.assign({}, oldState);
-    console.log(action)
+    // console.log(action)
     
     switch (action.type) {
         case RECEIVE_CURRENT_USER:

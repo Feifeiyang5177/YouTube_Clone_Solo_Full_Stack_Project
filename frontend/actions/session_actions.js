@@ -8,32 +8,34 @@ export const receiveUser = (user) => ({
     type: RECEIVE_CURRENT_USER,
     user
 })
-
 export const logoutUser = () => ({
     type: LOGOUT_CURRENT_USER
 });
-
 
 export const receiveErrors = errors => ({
     type: RECEIVE_SESSION_ERRORS,
     errors
 })
 
-
 export const clearErrors = () => ({
     type: CLEAR_ERRORS
 })
 
-export const signUp = (formUser) => dispatch => {
-    SessionUtil.signUp(formUser).then(user => dispatch(receiveUser(user))),
+
+export const signUp = (formUser) => dispatch => SessionUtil.signUp(formUser)
+    
+    .then(user => dispatch(receiveUser(user)),
     errors => dispatch(receiveErrors(errors.responseJSON))
-};
+    );
+
 
 export const logIn = (formUser) => dispatch => {
-    SessionUtil.logIn(formUser).then(user => dispatch(receiveUser(user))),
-    errors => dispatch(receiveErrors(errors.responseJSON)) 
+    return SessionUtil.logIn(formUser)
+    .then(user => dispatch(receiveUser(user)),
+    errors => dispatch(receiveErrors(errors.responseJSON)) )
 };
 
 export const logOut = () => dispatch => {
-    SessionUtil.logOut().then((user) => dispatch(logoutUser()))
+    return SessionUtil.logOut()
+    .then((user) => dispatch(logoutUser()))
 }
