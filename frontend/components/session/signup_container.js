@@ -4,7 +4,7 @@ import { signUp, logIn, clearErrors} from '../../actions/session_actions';
 
 
 const mSTP = state => {
-    console.log(state.err)
+    // console.log(state.err)
     return {errors: state.errors.session
     }
 };
