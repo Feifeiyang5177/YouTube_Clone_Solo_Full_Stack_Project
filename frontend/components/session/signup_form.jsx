@@ -28,23 +28,23 @@ class Signup extends React.Component {
     // console.log(this.props);
     return (
       <div className="session-form">
-        <h2>Sign Up!</h2>
-        <form>
-          <label>Username:
+        <h2 className="sign-up">Sign Up</h2>
+        <form className="signup-form">
+          <label className="username">Username:
             <input
               type="text"
               value={this.state.username}
               onChange={this.handleInput('username')}
             />
-          </label>
-          <label>Email:
+          </label >
+          <label className="email">Email:
               <input
                 type="text"
                 value={this.state.email}
                 onChange={this.handleInput('email')}
               />
           </label>
-          <label>Password:
+          <label className="password">Password:
             <input
               type="password"
               value={this.state.password}
@@ -59,6 +59,7 @@ class Signup extends React.Component {
 }
 
 export default Signup;
+
 
 
 
