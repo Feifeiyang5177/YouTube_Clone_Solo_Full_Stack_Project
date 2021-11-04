@@ -1,21 +1,76 @@
 
 
-export const logIn = (user) => (
+// Post User
+export const signUp = user => (
     $.ajax({
         url: '/api/users',
         method: 'POST',
         data: {user}
     })
-)
+);
 
-export const logOut = () => ({
-    url: '/api/session',
-    method: 'DELETE'
-})
+// Post Session
+export const logIn = user => (
+    $.ajax({
+        url: '/api/session',
+        method: 'POST',
+        data: { user}
+    })
+);
+
+
+// Delete Session
+export const logOut = () => (
+    $.ajax({
+        url: '/api/session',
+        method: 'DELETE'
+    })
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// export const logIn = (user) => (
+//     $.ajax({
+//         url: '/api/users',
+//         method: 'POST',
+//         data: {user}
+//     })
+// )
+
+// export const logOut = () => (
+//     $.ajax ({
+//         url: '/api/session',
+//         method: 'DELETE'
+//     })
+// )
  
-export const signUp = (user) => ({
-    url: '/api/session',
-    method: 'POST',
-    data: {user}
-})
+// export const signUp = (user) => (
+//     $.ajax({
+//     url: '/api/session',
+//     method: 'POST',
+//     data: {user}
+//     })
+// )
+
+
+
+
+
+
+
+
+
+
+
+
 

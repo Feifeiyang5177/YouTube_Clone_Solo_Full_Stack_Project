@@ -6,20 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
-Video.destroy_all
-Comment.destroy_all
-Like.destroy_all
-
 
 user1 = User.create!(username: 'Faker1', email: 'fakeuser1@gmail.com', password: 111111)
 user2 = User.create!(username: 'Faker2', email: 'fakeuser2@gmail.com', password: 222222)
 user3 = User.create!(username: 'Faker3', email: 'fakeuser3@gmail.com', password: 333333)
 user4 = User.create!(username: 'Faker4', email: 'fakeuser4@gmail.com', password: 444444)
 
-video1 = Video.create!(title: "video1", description: "test video 1", creator_id: user1.id, view_count: 0)
-
-
-# :title, :description, :creator_id, :view_count
 
 
 
