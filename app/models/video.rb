@@ -14,13 +14,18 @@
 #
 #  index_videos_on_creator_id  (creator_id)
 #
+class Video < ApplicationRecord
 
-# This model initially had no columns defined. If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-# column: value
+    validates :title, :description, :creator_id, presence: true
+
+    has_one_attached :video
+    has_one_attached :thumbnail
+
+    belongs_to :creator,
+    foreign_key: :creator_id,
+    class_name: :User 
+
+    # has_many :comments,
+    # foreign_key: :video_id,
+    # class_name: :Comment  
+end

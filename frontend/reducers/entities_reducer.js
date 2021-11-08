@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import usersReducer from './users_reducer';
+import VideoReducer from './video_reducer';
 
 const entities = combineReducers({
-    users: usersReducer,
+    videos: VideoReducer
 })
 
 export default entities

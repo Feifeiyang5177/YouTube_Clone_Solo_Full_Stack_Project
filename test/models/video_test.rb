@@ -3,9 +3,9 @@
 # Table name: videos
 #
 #  id          :bigint           not null, primary key
-#  description :text             not null
+#  description :text
 #  title       :string           not null
-#  view_count  :integer          not null
+#  view_count  :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  creator_id  :integer          not null

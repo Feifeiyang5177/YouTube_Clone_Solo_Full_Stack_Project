@@ -28,10 +28,12 @@ class Login extends React.Component {
     return (
       <div className="session-form">
         <h2>Log In</h2>
+
         <form>
           <label>Username:
           <input
-            type="text"
+          className="input"
+            type="input"
             value={this.state.username}
             onChange={this.handleInput('username')}
           />
@@ -39,12 +41,14 @@ class Login extends React.Component {
 
           <label>Password:
           <input
-            type="password"
+          className="input"
+            type="input"
             value={this.state.password}
             onChange={this.handleInput('password')}
           />
             <button onClick={this.handleSubmit}>Log In!</button>
           </label>
+
         </form>
       </div>
     );
