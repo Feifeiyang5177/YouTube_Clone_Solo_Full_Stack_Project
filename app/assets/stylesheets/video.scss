@@ -1,0 +1,250 @@
+
+
+
+// -------------------------- video index page ----------------------------
+
+
+
+.video-lines {
+    // background-color: blueviolet;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    // margin-top: 0px;
+    margin-left: 300px;
+    margin-right: 100px;
+    margin-bottom: 1000px;
+    border-top: 2.5px solid rgb(211, 209, 209);
+}
+
+
+        .group-video-each{
+            height: 400px;
+            width: 700px;
+            display: flex;
+            background-color: black;
+            // align-self: flex-start;
+            margin: 40px;
+            // flex-direction: row;
+            // justify-content: flex-end;
+            // align-items: flex-end;
+        }
+
+        .group-video-title-container{
+            // display: flex;
+            width: 600px;
+            margin-top: 10px;
+            margin-left: 40px;
+            margin-bottom: 150px;
+            // border: 1px solid rgb(250, 12, 4);
+        }
+
+
+            .group-video-title{
+                font-size: 40px;
+                font-family: 'Roboto', sans-serif;
+                color: rgb(23, 23, 23); 
+                margin-bottom: 30px;
+            }
+
+            .group-video-creator{
+                font-size: 25px;
+                font-family: 'Roboto', sans-serif;
+                color: rgb(83, 82, 82); 
+                margin-bottom: 10px;
+
+            }
+
+
+
+
+//--------------------------------- single video show page  ----------------------------------
+        .video-show-page {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            // margin-top: 100px;
+            margin-left: 300px;
+            margin-right: 100px;
+            margin-bottom: 1000px;
+            // border-bottom: 0.5px solid rgb(223, 221, 221);
+            // background-color: blueviolet;
+            
+        }
+                .video-container {
+                        margin-bottom: 500px;
+                        cursor: pointer;
+                        height: 800px;
+                        width: 1000px;
+                    }
+
+                .singleVideo {
+                        height: 1000px;
+                        width: 1500px;
+                        background-color: black;
+                        align-self: flex-start;
+                        margin-top: 75px;
+                        flex-direction: row;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                    }
+
+                .video-title-section{
+                    // display: flex;
+                    margin-top: 10px;
+                    margin-bottom: 40px;
+                    margin-left: 5px;
+                    margin-right: 0px;
+                    width: 1500px;
+                    height: 160px;
+                    // border: 1px solid rgb(10, 1, 0);
+                    border-bottom: 0.5px solid rgb(212, 210, 210);
+  
+                }
+                .video-title-container {
+                    width: 1500px;
+                    margin-top: 60px;
+                    margin-bottom: 30px;
+                    // border: 1px solid rgb(250, 12, 4);
+                    
+
+                }
+
+                    .video-title {
+                        font-size: 60px;
+                        font-family: 'Roboto', sans-serif;
+                        width: 784px;
+                        height: 30px;
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: flex-start;
+                        color: rgb(10, 10, 10);
+                        padding-right: 8px;
+                        padding-top: 8px;
+                        padding-bottom: 8px;
+                    }
+
+
+                    .video-view-count-container{
+                        width: 1500px;
+                        display: flex;
+                        justify-content: space-between;   
+                        border-bottom: 1px solid rgb(180, 179, 179) 1px;
+                    }
+
+                        .video-view-count{
+                            font-size: 30px;
+                            font-family: 'Roboto', sans-serif;
+                            color: rgb(122, 122, 122);       
+                        }
+                        .video-likes-icons {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 600px;
+                            margin-right: 0px;
+                        }
+                            .icon{
+                                width: 60px; 
+                                height: 40px;
+                                color: rgb(10, 10, 10);
+                            }
+                            .inner-content{
+                                display: flex;
+                                justify-content: space-between;
+                            }
+                            .likes-num{
+                                font-size: 30px;
+                                font-family: 'Roboto', sans-serif;
+                                color: rgb(10, 10, 10);
+
+                            }
+
+            .video-description-section{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                width: 1500px;
+                height: 160px;
+            }
+
+            .content{
+                display: flex;
+                flex-direction: column;
+                width: 1400px;
+                height: 160px;
+                margin-top: 30px;
+            }
+
+            .user-profile-img{
+                margin-top: 40px;
+            }
+
+          
+
+                .description-container{
+                    display: flex;
+                    // flex-direction: column;
+                    justify-content: space-between;
+                    // width: 800px;
+                    // height: 160px;
+                }
+                .creator{
+                    margin-top: 20px;
+                }
+
+                .creator-name{
+                    font-size: 30px;
+                    font-family: 'Roboto', sans-serif;
+                    color: rgb(10, 10, 10);
+                    font-weight: bold;
+                    margin-top: 40px;
+                }
+
+                .subscribe-button{
+                    background-color: #c70a04;
+                    border: none;
+                    color: rgb(252, 249, 249);
+                    padding: 15px 32px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 30px;
+                    font-weight: bolder;
+                    margin: 4px 2px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    height: 100px;
+                    width: 300px;
+                    margin-top: 30px;
+
+                    // border: 1px solid black;
+                }
+
+                .description-content{
+                    display: flex;
+                    margin-top: 50px;
+                    
+    
+    
+                }
+
+                .video-description{
+                    font-size: 30px;
+                                font-family: 'Roboto', sans-serif;
+                                color: rgb(10, 10, 10);
+                }
+
+
+
+
+
+
+
+
+    
+
+    
+    
+
+    

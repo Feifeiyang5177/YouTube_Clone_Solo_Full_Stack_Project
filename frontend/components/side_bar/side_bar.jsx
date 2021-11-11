@@ -1,45 +1,56 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { AiOutlineSearch} from "react-icons/ai";
+import {FaGithubAlt,} from "react-icons/fa";
+import {RiHomeGearFill} from "react-icons/ri";
+import {FcLink} from "react-icons/fc";
+import {FiCoffee} from "react-icons/fi";
+import {FiLinkedin} from "react-icons/fi";
 
+export default (props) => {
 
-export default ({ currentUser, logout }) => {
-const display = currentUser ? (
-    <div >
-      <button onClick={logout}>Sign out</button>
+  return ( 
+    <div className='sidebar-parent'>
+        <header className="side-bar">
+        <div className='sidebar-content'>
+            {/* <RiHomeGearFill className='sidebar-icon'/><Link to='/videos' className='sidebar-icon-words'> Home</Link> */}
+            <Link to='/videos'>
+              <RiHomeGearFill className='sidebar-icon'/></Link>
+              <div className='sidebar-icon-words'> Home</div>
+              
+         </div>
+         
+          
+          <div className='sidebar-content'>
+              {/* <FiLinkedin className='sidebar-icon'/> <a className='sidebar-icon-words' href='https://github.com/Feifeiyang5177'>LinkedIn</a> */}
+              <a href="https://www.linkedin.com/in/feifei-yang-6990bb38/">
+                <FiLinkedin className='sidebar-icon'/> 
+              </a>
+              <div className='sidebar-icon-words' >LinkedIn</div>
+              
+          </div>
+          <div className='sidebar-content'>
+              <a href='https://github.com/Feifeiyang5177'>
+                <FaGithubAlt className='sidebar-icon'/> 
+              </a>
+              <div className='sidebar-icon-words' >GitHub</div>
+          </div>
+          
+          <div className='sidebar-content'>
+              <a href="https://www.feifei-yang.com/">
+                <FcLink className='sidebar-icon'/>
+              </a>
+              <div className='sidebar-icon-words'>Personal Web</div>
+          </div>
+          <div className='sidebar-content'>
+              <a href="https://en.wikipedia.org/wiki/Feifei_Yang">
+                <FiCoffee className='sidebar-icon'/>
+              </a>
+              <div className='sidebar-icon-words'>Wiki</div>
+          </div>
+        </header>
+
     </div>
-  ) : (
-    <div className='link-bar'>
-      <Link className="btn" to="/signup">Sign Up</Link>
-      <Link className="btn" to="/login">Log In</Link>
-    </div>
-  );
-
-  return (
-    
-    <header className="nav-bar">
-
-      <div className='yatube-logo'>
-        <h1 className="logo">
-            <Link className="ya" to='/'>Y a</Link>
-            <Link className="tube" to="/">Tube</Link>
-        </h1>
-        
-      </div>
-
-      <div className='search-bar'>
-        <input className='search-input'
-            type='text'
-            placeholder='Search'/>
-            <AiOutlineSearch style={{ marginRight: 25, width: 30, height: 25 }} />
-      </div>
-
-      <div>
-        <Link to="/videos"></Link>
-      </div>
-     
-       <div>{display}</div>
-    </header>
    
   )
 }
+

@@ -16,7 +16,7 @@ class Login extends React.Component {
     return (e) => {
       this.setState({ [type]: e.target.value });
     };
-  }
+  } 
 
   handleSubmit(e) {
     e.preventDefault();
@@ -27,27 +27,39 @@ class Login extends React.Component {
   render() {
     return (
       <div className="session-form">
-        <h2>Log In</h2>
+        
 
-        <form>
-          <label>Username:
-          <input
-          className="input"
-            type="input"
-            value={this.state.username}
-            onChange={this.handleInput('username')}
-          />
-          </label>
+        <form className="content-form">
+        <img className='session-logo-img' src={window.yatubeLogoURL}/>
+        <h2 className="title">Sign In</h2>
+        <br></br>
+        <h3 className='sub-title'>to continue to YaTube</h3>
+        
 
-          <label>Password:
-          <input
-          className="input"
-            type="input"
-            value={this.state.password}
-            onChange={this.handleInput('password')}
-          />
-            <button onClick={this.handleSubmit}>Log In!</button>
-          </label>
+          <div className="lables">
+            <label className="username">
+              <input
+              className="input"
+                type="input"
+                value={this.state.username}
+                placeholder='Username'
+                size='70'
+                onChange={this.handleInput('username')}
+              />
+            </label>
+
+            <label className="password">
+              <input
+              className="input"
+                type="input"
+                value={this.state.password}
+                placeholder='Password'
+                size='70'
+                onChange={this.handleInput('password')}
+              />
+            </label>
+          </div>
+          <button className="button" onClick={this.handleSubmit}>Next</button>
 
         </form>
       </div>

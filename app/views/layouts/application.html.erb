@@ -3,20 +3,19 @@
   <head>
     <title>YaTube</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <% if current_user %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
     
-      <script>
-        window.currentUser = { 
-          "id": <%= current_user.id %>,
-          "username": "<%= current_user.username %>",
-          "email": "<%= current_user.email %>"
-          };
-          window.yatubeLogoURL = "<%= image_url('yatubelogo.png') %>";
+      <script type="text/javascript">
+       
+        window.yatubeLogoURL = "<%= image_url('yatubelogo.png') %>";
+        window.userProfile1URL = "<%= image_url('profile1.png') %>";
+        window.userProfile2URL = "<%= image_url('profile2.png') %>"
+         
       </script>
-    <% end %>
   </head>
   <body>
     <%= yield %>

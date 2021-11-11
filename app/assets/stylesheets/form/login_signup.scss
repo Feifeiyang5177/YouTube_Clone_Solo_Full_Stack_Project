@@ -1,78 +1,122 @@
-
+// html, body, div {
+//   padding: 0;
+//   margin: 0;
+//   font-family: sans-serif;
+//   background-color: white;
+// }
+ 
 .session-form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 90vh;
+  height: 120vh;
   justify-content: center;
   align-items: center;
-  form {
-    height: 300px;
-    width: 300px;
-    background: rgb(240, 240, 240);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  border-radius: 10px;
+  background-color: white;
+
+      .session-logo-img{
+
+        width: 25%;
+        padding-bottom: 30px;
+      }
+
+      .title{
+        font-family:'Raleway', sans-serif;
+        font-size: 40px;
+        font-weight: bold;
+      }
+      .sub-title{
+        font-family: 'Raleway', sans-serif;
+        font-size: 30px;
+      }
+
+      .content-form {
+        height: 90%;
+        width: 50%;
+        border: 0.5px solid #ccc;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+
+            .lables {
+              // background-color: rgb(242, 247, 248);
+              background-color: white;
+              height: 50%;
+              width: 100%;
+            
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+  
+                    .username{
+                      font-family: 'Raleway', sans-serif;
+                      font-size: 100px;
+                      display: flex;                  
+                      justify-content: center;                  
+                      height: 60px;
+                      
+                      font-size: 1.2em;
+                    }
+                    
+                    ::placeholder {
+                      color: rgb(170, 168, 168);
+                      font-size: 18px;
+                      width: 100%;
+                    }
+                    .email{
+                      font-family: 'Raleway', sans-serif;
+                      font-size: 50px;
+                      display: flex;
+                      justify-content: center;
+                      height: 60px                   
+                    }
+                    .password{
+                      font-family: 'Raleway', sans-serif;
+                      font-size: 50px;
+                      display: flex;
+                      justify-content: center;
+                      height: 60px                     
+                    }
+              }
+
+            .button{
+              background-color: #066df5;
+              border: none;
+              color: white;
+              padding: 15px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 20px;
+              margin: 4px 2px;
+              border-radius: 5px;
+              cursor: pointer;
+            }
+            .button:hover {
+              background-color: rgb(152, 212, 250);
+              box-shadow: 1px 1px 1px rgb(66, 66, 66);
+              }
+
+
+            .button2{
+              background-color: rgb(242, 247, 248);
+              border: none;
+              color: #066df5;
+              padding: 15px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 20px;
+              margin: 4px 2px;
+              border-radius: 5px;
+              cursor: pointer;
+            }
+           
+        }
+
   }
-  label {
-    padding: 10px;
-    display: block;
-  }
-  button {
-    display: block;
-    padding: 10px;
-    margin: 20px;
-  }
-}
 
-
-
-
-
-
-
-
-
-
-// .session-form {
-//     display: flex;
-//     flex-direction: column;
-//     width: 100%;
-//     height: 90vh;
-//     justify-content: center;
-//     align-items: center;
-   
-//     .signup-form {
-//       height: 300px;
-//       width: 50vh;
-//       background: rgb(218, 55, 55);
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: center;
-//       align-items: center;
-//       border: 1px solid #ccc;
-//       border-radius: 5px;
-//       box-sizing: border-box;
-//     }
-//     .label {
-//       padding: 200px;
-//       display: block;
-//       border-radius: 10px;
-//       size: 30px;
-//       color: rgb(56, 56, 56);
-//       padding: 20px;
-//       font-family:Arial, Helvetica, sans-serif;
-      
-      
-//     }
-//     .button {
-//       display: flex;
-//       padding: 10px;
-//       margin-top: 20%;
-//       color: rgb(73, 73, 72);
-//       background-color: white;
-//       border: 1px solid rgb(202, 201, 201);
-
-//     }
-//   }

@@ -19,13 +19,14 @@ class Api::VideosController < ApplicationController
     end 
 
     def show
+      
         @video = Video.find(params[:id])
         render :show
     end 
 
     private
     def video_params
-        params.require(:video).permit(:title, :creator_id, :description, :view_count, :thumbnail)
+        params.require(:video).permit(:title, :creator_id, :description, :view_count, :vd)
     end 
 
 end

@@ -1,22 +1,50 @@
 import React from "react";
-import { render } from "react-dom";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import {IoHome} from "react-icons/io";
+import {FiThumbsUp, FiThumbsDown} from "react-icons/fi";
 
-const VideoIndexItem = (props) => {
-    
-        return(
+
+class VideoIndexItem extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+
+
+    render(){
+        const {video} = this.props;
+
+        return (
             <div>
-                <br></br>
-                <br></br>
-                <br></br>      
-                <div>Item page: Upload Videos</div>
-                <br></br>
-                <input type="file"  accept="video/*" />
+                <div className="video-section">
+                    <Link to={`videos/${video.id}`}>
+                        <video className="group-video-each" src={video.vdUrl} controls></video>
+                    </Link>
+                    <div className="group-video-title-container">
+                           
+                                <div className="group-video-title">{video.title}</div>
+                                <div className="group-video-creator">Feifei</div>
+                                <div className="group-video-creator">54 views  • 3 days ago</div>
+                            
+                    </div>
+
+
+                </div>
 
             </div>
+           
         )
-    
+
+    }
+
+
 }
+
+export default VideoIndexItem
+
+
+
+
+
 
 
 
@@ -72,4 +100,4 @@ const VideoIndexItem = (props) => {
 
 // }
 
-export default VideoIndexItem
+// export default VideoIndexItem

@@ -22,7 +22,11 @@ class User < ApplicationRecord
     validates :password_digest, :session_token, presence: true
     validates :password, length: { minimum: 6 }, allow_nil: true
     #validates :email, formate: { with: URI::MailTo::EMAIL_REGEXP }
-    after_initialize :ensure_session_token 
+    after_initialize :ensure_session_token
+    
+    has_many :videos,
+    foreign_key: :creator_id,
+    class_name: :Video
     
 
     def self.find_by_credentials(username, password)

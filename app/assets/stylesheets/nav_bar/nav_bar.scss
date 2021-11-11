@@ -1,48 +1,71 @@
+
+
 html, body, div {
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    background-color:rgb(243, 242, 242);
+    background-color: white;
   }
+
+.link-bar{
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  .btn {
+    background-color: white;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 1px rgb(164, 164, 167);
+    text-decoration:rgb(205, 205, 207);
+    border-radius: 10px;
+    background-color: rgb(248, 246, 246);
+  }
+  .btn:hover {
+  background-color: rgb(240, 240, 240);
+  box-shadow: 1px 1px 1px rgb(66, 66, 66);
+  }
+}
   
- 
+  
   .nav-bar {
     display: flex;
     justify-content: space-between;
-    padding: 5px;
+    padding: 20px;
     border-bottom: 0.5px solid rgb(223, 221, 221);
     background: rgb(252, 253, 253);
     align-items: center;
 
-    .create-video-sign {
-      margin-right: 0;
-
-    }
-
     .yatube-logo {
-      margin-left: 0;
+      display: flex;
+      justify-content: space-between;
+    //  width: 50px;
       
       .logo {
         font-family: sans-serif;
-        font-size: 30px;
+        margin-left: 50px;
+        transition: all 0.1s ease-in-out;
         
+      }
+      .logo:hover{
+        transform: scale(1.2);
+      }
+      .menu-icon{
+      width: 80px; 
+      height: 50px;
+      color: rgb(131, 130, 130);
       }
       .ya {
         padding-right: 5px;
         letter-spacing: -5px;
         text-shadow: 0 2px 0 white;
         text-decoration: none;
-        font-size: 33px;
+        font-size: 45px;
         color: black;
-        // font-family: sans-serif;
         font-weight: bold;
 
       }
       .tube {
         position: center;
         font-weight: 800;
-        // padding-left: 2px;
-        font-size: 32px;
+        font-size: 43px;
         padding: 0 14px 0 6px;
         font-family: sans-serif;
         background-image: -webkit-linear-gradient(bottom, rgb(109, 2, 2) 22%, rgb(201, 0, 0) 61%);
@@ -58,37 +81,48 @@ html, body, div {
         text-decoration: none;
       }
     }
-    
-    .btn {
-      background-color: white;
-      padding: 10px;
-      box-shadow: 1px 1px 1px 1px rgb(164, 164, 167);
-      text-decoration:rgb(205, 205, 207);
-    }
-    .btn:hover {
-     background-color: rgb(240, 240, 240);
-     box-shadow: 1px 1px 1px rgb(66, 66, 66);
-    }
-    .search-bar {
+    .search-and-create-icon{
       display: flex;
-      align-items: center;
-      height: 5vh;
-      width: 45vw;
-      background: white;
-      padding: 10;
-      border-right: 0;
-      border: solid rgb(196, 196, 196) 1px;
-      border-bottom-left-radius: 2px;
-      border-top-left-radius: 2px;
-      border-top-right-radius: 2px;
-      border-bottom-right-radius: 2px;
-      .search-input {
-        flex: 1;
-        height: 50%;
-        border: none;
-        outline: none;
-        font-size: 20px;
-        margin-left: 20px;
-      }
+      
     }
-  }
+    .create-video-icon{
+      width: 50px; 
+      height: 50px;
+      color: rgb(131, 130, 130);
+      margin-left: 80px;
+      margin-top: 12px;
+     
+      
+    }
+        .search-bar {
+          display: flex;
+          align-items: center;
+          height: 4vh;
+          width: 50vw;
+          background: white;
+          padding: 10;
+          border-right: 0;
+          border: solid rgb(196, 196, 196) 1px;
+          border-bottom-left-radius: 2px;
+          border-top-left-radius: 2px;
+          border-top-right-radius: 2px;
+          border-bottom-right-radius: 2px;}
+          .search-icon{
+            width: 50px; 
+            min-width: 50px;
+            height: 50px;
+            color: rgb(131, 130, 130);
+            margin-right: 15px;
+          }
+          .search-input {
+            flex: 1;
+            height: 50%;
+            border: none;
+            outline: none;
+            font-size: 20px;
+            margin-left: 20px;
+          }
+        
+    }
+  
+    
