@@ -51,13 +51,14 @@ html, body, div {
       width: 80px; 
       height: 50px;
       color: rgb(131, 130, 130);
+      margin-left: 20px;
       }
       .ya {
         padding-right: 5px;
         letter-spacing: -5px;
         text-shadow: 0 2px 0 white;
         text-decoration: none;
-        font-size: 45px;
+        font-size: 48px;
         color: black;
         font-weight: bold;
 
@@ -65,7 +66,7 @@ html, body, div {
       .tube {
         position: center;
         font-weight: 800;
-        font-size: 43px;
+        font-size: 45px;
         padding: 0 14px 0 6px;
         font-family: sans-serif;
         background-image: -webkit-linear-gradient(bottom, rgb(109, 2, 2) 22%, rgb(201, 0, 0) 61%);
@@ -97,7 +98,7 @@ html, body, div {
         .search-bar {
           display: flex;
           align-items: center;
-          height: 4vh;
+          height: 5vh;
           width: 50vw;
           background: white;
           padding: 10;

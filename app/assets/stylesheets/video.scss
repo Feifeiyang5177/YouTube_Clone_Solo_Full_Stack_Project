@@ -6,38 +6,30 @@
 
 
 .video-lines {
-    // background-color: blueviolet;
+ 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     flex-direction: row;
-    // margin-top: 0px;
     margin-left: 300px;
     margin-right: 100px;
     margin-bottom: 1000px;
     border-top: 2.5px solid rgb(211, 209, 209);
 }
 
-
         .group-video-each{
             height: 400px;
             width: 700px;
             display: flex;
             background-color: black;
-            // align-self: flex-start;
             margin: 40px;
-            // flex-direction: row;
-            // justify-content: flex-end;
-            // align-items: flex-end;
+           
         }
 
         .group-video-title-container{
-            // display: flex;
             width: 600px;
             margin-top: 10px;
             margin-left: 40px;
             margin-bottom: 150px;
-            // border: 1px solid rgb(250, 12, 4);
         }
 
 
@@ -63,14 +55,10 @@
         .video-show-page {
             display: flex;
             justify-content: space-between;
-            flex-direction: row;
-            // margin-top: 100px;
+            flex-direction: row;          
             margin-left: 300px;
             margin-right: 100px;
-            margin-bottom: 1000px;
-            // border-bottom: 0.5px solid rgb(223, 221, 221);
-            // background-color: blueviolet;
-            
+            margin-bottom: 1000px;   
         }
                 .video-container {
                         margin-bottom: 500px;
@@ -90,15 +78,13 @@
                         align-items: flex-end;
                     }
 
-                .video-title-section{
-                    // display: flex;
+                .video-title-section{   
                     margin-top: 10px;
                     margin-bottom: 40px;
                     margin-left: 5px;
                     margin-right: 0px;
                     width: 1500px;
                     height: 160px;
-                    // border: 1px solid rgb(10, 1, 0);
                     border-bottom: 0.5px solid rgb(212, 210, 210);
   
                 }
@@ -106,9 +92,6 @@
                     width: 1500px;
                     margin-top: 60px;
                     margin-bottom: 30px;
-                    // border: 1px solid rgb(250, 12, 4);
-                    
-
                 }
 
                     .video-title {
@@ -184,10 +167,8 @@
 
                 .description-container{
                     display: flex;
-                    // flex-direction: column;
                     justify-content: space-between;
-                    // width: 800px;
-                    // height: 160px;
+
                 }
                 .creator{
                     margin-top: 20px;
@@ -217,16 +198,11 @@
                     height: 100px;
                     width: 300px;
                     margin-top: 30px;
-
-                    // border: 1px solid black;
                 }
 
                 .description-content{
                     display: flex;
                     margin-top: 50px;
-                    
-    
-    
                 }
 
                 .video-description{
