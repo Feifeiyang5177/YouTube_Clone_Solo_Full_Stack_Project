@@ -48,12 +48,10 @@ class VideoShow extends React.Component {
                                                 <div className='likes-num'>SHARE</div>
                                             </div>
 
-                                            <FiMoreHorizontal className='icon'/>
-                                        
+                                            <FiMoreHorizontal className='icon'/>                                    
                                     </div>
                             </div>
                     </div>
-
 
                     <div className='video-description-section'>
                         <img className='user-profile-img' src={window.userProfile2URL}/>

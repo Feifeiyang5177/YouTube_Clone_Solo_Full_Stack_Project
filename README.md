@@ -10,6 +10,7 @@ YaTube is a clone website which is based on the most popular video sharing websi
 - Redux
 - Ruby
 - Rails
+- JavaScript
 - Postgresql
 - AWS
 
@@ -37,7 +38,7 @@ YaTube is a clone website which is based on the most popular video sharing websi
 
 ## Implimentation
 
-- Realizing that i will have multiple elements to render for one element, I was able to manage and organize them in order to style them efficiently. 
+- Realizing that i will have multiple elements to render for one component, I was able to manage and organize multitple elements in order to style them efficiently. 
 ```render(){
         const {video} = this.props;
         return (
