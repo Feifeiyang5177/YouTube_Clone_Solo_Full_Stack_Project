@@ -13,9 +13,7 @@ YaTube is a clone website which is based on the most popular video sharing websi
 ## Core Features 
 
 - Account creation, login, log out, demo login.
-![alt text][logo]
-
-[logo]: https://github.com
+![alt text](/app/assets/images/sign_up.png)
   - Users can sign up, sign in, log out on the site.
   - Users can also use demo user mode logging in to try the site.
   
