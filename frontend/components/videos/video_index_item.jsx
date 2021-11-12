@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {IoHome} from "react-icons/io";
-import {FiThumbsUp, FiThumbsDown} from "react-icons/fi";
 
 
 class VideoIndexItem extends React.Component {
