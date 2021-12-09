@@ -28,8 +28,7 @@ class Signup extends React.Component {
 
 
   loginDemo() {
-  
-    
+
     this.props.login({username: 'Demo5', email: 'user5@gmail.com', password: '555555'}).then(() => this.props.history.push('/videos'));
 
   }

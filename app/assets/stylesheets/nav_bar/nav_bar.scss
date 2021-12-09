@@ -3,70 +3,67 @@
 html, body, div {
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
+    // font-family: sans-serif;
     background-color: white;
   }
+ 
 
-.link-bar{
-  font-family: 'Raleway', sans-serif;
-  font-weight: bold;
-  .btn {
-    background-color: white;
-    padding: 10px;
-    box-shadow: 1px 1px 1px 1px rgb(164, 164, 167);
-    text-decoration:rgb(205, 205, 207);
-    border-radius: 10px;
-    background-color: rgb(248, 246, 246);
-  }
-  .btn:hover {
-  background-color: rgb(240, 240, 240);
-  box-shadow: 1px 1px 1px rgb(66, 66, 66);
-  }
-}
-  
-  
   .nav-bar {
     display: flex;
+    position: fixed;
     justify-content: space-between;
-    padding: 20px;
-    border-bottom: 0.5px solid rgb(223, 221, 221);
-    background: rgb(252, 253, 253);
     align-items: center;
+    padding: 0 16px;
+    border-bottom: 0.5px solid rgb(201, 113, 113);
+    background: white;
+    align-items: center;
+    height: 56px;
+    // margin-bottom: 5px;
+    border: 0;
+    z-index: 10;
+    // max-height: 5vh;
+    // min-height: 5vh;
+  }
 
-    .yatube-logo {
+
+    .logo-and-menu-icon {
       display: flex;
-      justify-content: space-between;
-    //  width: 50px;
-      
-      .logo {
-        font-family: sans-serif;
-        margin-left: 50px;
-        transition: all 0.1s ease-in-out;
-        
+      min-width: 20vw;
+      // justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+    }
+    .menu-icon{
+      width: 30px; 
+      height: 40px;
+      color: rgb(2, 0, 0);
+      margin-left: 10px;
       }
-      .logo:hover{
+
+    .logo {
+        font-family: sans-serif;
+        margin-left: 20%;
+        transition: all 0.1s ease-in-out;
+        margin-top: 5px;
+        min-width: 10vw;
+      }
+    .logo:hover{
         transform: scale(1.2);
       }
-      .menu-icon{
-      width: 80px; 
-      height: 50px;
-      color: rgb(131, 130, 130);
-      margin-left: 20px;
-      }
-      .ya {
+    
+    .ya {
         padding-right: 5px;
         letter-spacing: -5px;
         text-shadow: 0 2px 0 white;
         text-decoration: none;
-        font-size: 48px;
+        font-size: 30px;
         color: black;
         font-weight: bold;
-
       }
-      .tube {
+    .tube {
         position: center;
         font-weight: 800;
-        font-size: 45px;
+        font-size: 30px;
         padding: 0 14px 0 6px;
         font-family: sans-serif;
         background-image: -webkit-linear-gradient(bottom, rgb(109, 2, 2) 22%, rgb(201, 0, 0) 61%);
@@ -81,49 +78,139 @@ html, body, div {
         box-shadow: 0px 15px 20px -5px rgba(0, 0, 0, 0.67);
         text-decoration: none;
       }
-    }
-    .search-and-create-icon{
+
+
+    // search and create icon
+    .search-bar-and-icon{
       display: flex;
       
     }
-    .create-video-icon{
-      width: 50px; 
-      height: 50px;
-      color: rgb(131, 130, 130);
-      margin-left: 80px;
-      margin-top: 12px;
-     
-      
-    }
-        .search-bar {
+
+
+    .search-bar {
           display: flex;
+          position: relative;
           align-items: center;
-          height: 5vh;
-          width: 50vw;
+          height: 40%;
+          max-height: 40%;
+          width: 48vw;  
+          max-width: 48vw;  
+          margin-top: 5px;   
           background: white;
-          padding: 10;
           border-right: 0;
           border: solid rgb(196, 196, 196) 1px;
-          border-bottom-left-radius: 2px;
-          border-top-left-radius: 2px;
-          border-top-right-radius: 2px;
-          border-bottom-right-radius: 2px;}
+          border-radius: 2px;
+      
+
+    }
+    .search-button{
+          background-color: rgb(248, 248, 248);
+          height: 40px;
+          min-height: 40px;
+          width: 70px;
+          min-width: 70px;
+          display: flex;
+          border-left: 1px solid rgb(196, 196, 196);
+          border-bottom: none;
+          border-top: none;
+          border-right: none;
+    }
           .search-icon{
-            width: 50px; 
-            min-width: 50px;
-            height: 50px;
-            color: rgb(131, 130, 130);
-            margin-right: 15px;
+            width: 26px; 
+            // min-width: 100%;
+            height: 26px;
+            color: rgb(2, 0, 0);
+            display: flex;
+            // align-items: center;
+            margin-left: 18px;
+            margin-top: 5px;
           }
           .search-input {
             flex: 1;
             height: 50%;
             border: none;
             outline: none;
-            font-size: 20px;
-            margin-left: 20px;
+            font-size: 17px;
+            margin-left: 10px;
           }
-        
+
+  .camera-icon-and-session-btn{
+    // background-color: yellow;
+    display: flex;
+    // margin-top: 5px;
+    width: 32vw;
+    height: 56px;
+    // padding-top: 5px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .camera-icon{
+      width: 30px; 
+      height: 30px;
+      color: rgb(2, 0, 0);
+      margin-left: 10vw;
     }
+
+  .session-bar{
+  display: flex;
+  width: 15vw;
+  max-width: 15vw;
+   height: 56px;
+  // max-height: 56px;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  // background-color: aqua;
+}
+  .btn-sign-up {
+    background-color: rgb(248, 248, 248);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    // max-height: 10vh;
+    width: 60px;
+    // max-width: 5vw;
+    // height: 10px;
+    // width: 5vw;
+    box-shadow: 1px 1px 1px 1px rgb(164, 164, 167);
+    text-decoration:rgb(25, 25, 26);
+    border-radius: 10%;
+    background-color: rgb(248, 246, 246);
+    // margin-top: px;  
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+  // .sign-up{
+  //   padding-top: 10px;
+  // }
+  .btn-sign-up:hover {
+  background-color: rgb(240, 240, 240);
+  box-shadow: 1px 1px 1px rgb(66, 66, 66);
+  }
+   .btn-sign-in {
+    background-color: white;
+    height: 30px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    // padding: 5px;
+    box-shadow: 1px 1px 1px 1px rgb(164, 164, 167);
+    text-decoration:rgb(25, 25, 26);
+    border-radius: 10%;
+    background-color: rgb(248, 246, 246);
+    margin-right: 5px;
+    margin-left: 10px;
+  }
+  .btn-sign-in:hover {
+  background-color: rgb(240, 240, 240);
+  box-shadow: 1px 1px 1px rgb(66, 66, 66);
+  }
+        
+    
   
     

@@ -12,7 +12,7 @@ class VideoIndexItem extends React.Component {
         const {video} = this.props;
 
         return (
-            <div>
+            <div className="video-index-item-page">
                 <div className="video-section">
                     <Link to={`videos/${video.id}`}>
                         <video className="group-video-each" src={video.vdUrl} controls></video>

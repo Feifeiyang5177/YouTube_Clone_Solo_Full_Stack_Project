@@ -11,15 +11,18 @@ import SideBarContainer from './side_bar/side_bar_container'
 
 export default () => (
   <div>
-      <header>
-      <Route path="/" component={NavBarContainer}/>
-      <Route path="/" component={SideBarContainer}/>
-      </header>
+    <header>
+      {/* <SideBarContainer /> */}
+      <NavBarContainer />
+      <Route exact path="/" component={SideBarContainer} />
+    </header>
     <Switch>
+      {/* <Route path="/sidebar" component={SideBarContainer} /> */}
+      <Route exact path="/" component={VideoIndexContainer} />
       <Route exact path="/videos/:videoId" component={VideoShowContainer} />
       <AuthRoute exact path="/login" component={LoginContainer} />
       <AuthRoute exact path="/signup" component={SignupContainer} />
-      <Route exact path="/videos" component={VideoIndexContainer} />
+      {/* <Route exact path="/videos" component={VideoIndexContainer} /> */}
     </Switch>
   </div>
 );

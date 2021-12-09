@@ -11,9 +11,9 @@ class VideoShow extends React.Component {
 
     }
 
-    componentDidMount(){
-       
+    componentDidMount(){  
         this.props.fetchVideo(this.props.match.params.videoId);
+        this.props.fetchVideos();
     }
 
     render(){
@@ -55,7 +55,7 @@ class VideoShow extends React.Component {
 
                     <div className='video-description-section'>
                         <img className='user-profile-img' src={window.userProfile2URL}/>
-
+                        
                         <div className='content'>
                             <div className="description-container">
                                 <div className='creator'>
@@ -73,6 +73,15 @@ class VideoShow extends React.Component {
                     </div>
 
                 </div>
+
+
+
+                <div>ALL OTHER VIDEOS </div>
+
+
+
+
+
             </div>
         )
     }

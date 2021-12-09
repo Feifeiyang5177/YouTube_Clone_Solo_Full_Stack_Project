@@ -3,48 +3,88 @@
 
 // -------------------------- video index page ----------------------------
 
-
+// .video-index-page{
+    
+//     // background-color: rgb(245, 245, 244);
+     
+// }
 
 .video-lines {
- 
+ background-color: rgb(245, 245, 244);
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-left: 300px;
-    margin-right: 100px;
-    margin-bottom: 1000px;
-    border-top: 2.5px solid rgb(211, 209, 209);
+    width: 100vw;
+    // margin-left: 80px;
+    // margin-right: 100px;
+    margin-bottom: 25%;
+    padding-top: 100px;
+    // margin-top: 150px;
+    
 }
 
+.video-index-item-page{
+    // background-color: rgb(245, 245, 244);
+    background-color: transparent;
+//    margin-top: 100px;
+    display: flex;
+    // width: 400px;
+    width: 30vw;
+    height: 45vh;
+    // border-top: 2.5px solid rgb(211, 209, 209);
+}
+.video-section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30vw;
+    height: 45vh;
+    //will not shrink in to the side bar
+    margin-left: 100px;
+    // background-color: transparent;
+    background-color: transparent;
+    // margin-bottom: 0%;
+    // padding-top: 20px;
+    // border-top: 1px solid rgb(172, 172, 171);
+    // border-bottom: none;
+
+}
         .group-video-each{
-            height: 400px;
-            width: 700px;
+            // height: 200px;
+            // width: 300px;
+            height: 25vh;
+            width: 25vw;
             display: flex;
             background-color: black;
-            margin: 40px;
+            margin-right: 5px;
+            flex-wrap: wrap;
            
         }
 
         .group-video-title-container{
-            width: 600px;
+            width: 300px;
             margin-top: 10px;
-            margin-left: 40px;
-            margin-bottom: 150px;
+            // margin-left: 40px;
+            margin-bottom: 5%;
+            // background-color: rgb(245, 245, 244);
+            background-color: transparent;
         }
 
 
             .group-video-title{
-                font-size: 40px;
+                font-size: 20px;
                 font-family: 'Roboto', sans-serif;
                 color: rgb(23, 23, 23); 
-                margin-bottom: 30px;
+                margin-bottom: 10px;
+                background-color: transparent;
             }
 
             .group-video-creator{
-                font-size: 25px;
+                font-size: 13px;
                 font-family: 'Roboto', sans-serif;
                 color: rgb(83, 82, 82); 
-                margin-bottom: 10px;
+                // margin-bottom: 10px;
+                background-color: transparent;
 
             }
 
@@ -56,23 +96,25 @@
             display: flex;
             justify-content: space-between;
             flex-direction: row;          
-            margin-left: 300px;
-            margin-right: 100px;
-            margin-bottom: 1000px;   
+            margin-left: 30px;
+            // margin-right: 100px;
+            // margin-bottom: 1000px;   
         }
                 .video-container {
                         margin-bottom: 500px;
                         cursor: pointer;
-                        height: 800px;
-                        width: 1000px;
+                        // height: 800px;
+                        // width: 700px;
+                        height: 58vh;
+                        width: 55vw;
                     }
 
                 .singleVideo {
-                        height: 1000px;
-                        width: 1500px;
+                        height: 58vh;
+                        width: 55vw;
                         background-color: black;
                         align-self: flex-start;
-                        margin-top: 75px;
+                        margin-top: 10%;
                         flex-direction: row;
                         justify-content: flex-end;
                         align-items: flex-end;
@@ -83,21 +125,25 @@
                     margin-bottom: 40px;
                     margin-left: 5px;
                     margin-right: 0px;
-                    width: 1500px;
+                    // width: 700px;
+                    // height: 55vh;
+                    width: 55vw;
                     height: 160px;
                     border-bottom: 0.5px solid rgb(212, 210, 210);
   
                 }
                 .video-title-container {
-                    width: 1500px;
+                    // width: 700px;
+                    width: 55vw;
                     margin-top: 60px;
                     margin-bottom: 30px;
                 }
 
                     .video-title {
-                        font-size: 60px;
+                        font-size: 30px;
                         font-family: 'Roboto', sans-serif;
-                        width: 784px;
+                        // width: 700px;
+                        width: 55vw;
                         height: 30px;
                         display: flex;
                         align-items: flex-end;
@@ -110,26 +156,28 @@
 
 
                     .video-view-count-container{
-                        width: 1500px;
+                        // width: 700px;
+                        width: 55vw;
                         display: flex;
                         justify-content: space-between;   
                         border-bottom: 1px solid rgb(180, 179, 179) 1px;
                     }
 
                         .video-view-count{
-                            font-size: 30px;
+                            font-size: 15px;
                             font-family: 'Roboto', sans-serif;
                             color: rgb(122, 122, 122);       
                         }
                         .video-likes-icons {
                             display: flex;
                             justify-content: space-between;
-                            width: 600px;
-                            margin-right: 0px;
+                            // width: 300px;
+                            width: 30vw;
+                            // margin-right: 0px;
                         }
                             .icon{
-                                width: 60px; 
-                                height: 40px;
+                                width: 5vw; 
+                                height: 3vh;
                                 color: rgb(10, 10, 10);
                             }
                             .inner-content{
@@ -137,7 +185,7 @@
                                 justify-content: space-between;
                             }
                             .likes-num{
-                                font-size: 30px;
+                                font-size: 15px;
                                 font-family: 'Roboto', sans-serif;
                                 color: rgb(10, 10, 10);
 
@@ -147,20 +195,25 @@
                 display: flex;
                 justify-content: space-between;
                 flex-direction: row;
-                width: 1500px;
+                // width: 700px;
+                width: 55vw;
                 height: 160px;
             }
 
             .content{
                 display: flex;
                 flex-direction: column;
-                width: 1400px;
+                // align-items: center;
+                justify-content: space-between;
+                width: 48vw;
                 height: 160px;
                 margin-top: 30px;
             }
 
             .user-profile-img{
                 margin-top: 40px;
+                width: 6vw;
+                height: 10vh;
             }
 
           
@@ -175,28 +228,28 @@
                 }
 
                 .creator-name{
-                    font-size: 30px;
+                    font-size: 20px;
                     font-family: 'Roboto', sans-serif;
                     color: rgb(10, 10, 10);
                     font-weight: bold;
-                    margin-top: 40px;
+                    margin-top: 20px;
                 }
 
                 .subscribe-button{
                     background-color: #c70a04;
                     border: none;
                     color: rgb(252, 249, 249);
-                    padding: 15px 32px;
+                    // padding: 15px 32px;
                     text-align: center;
                     text-decoration: none;
                     display: inline-block;
-                    font-size: 30px;
+                    font-size: 13px;
                     font-weight: bolder;
-                    margin: 4px 2px;
-                    border-radius: 5px;
+                    // margin: 4px 2px;
+                    border-radius: 2px;
                     cursor: pointer;
-                    height: 100px;
-                    width: 300px;
+                    height: 5.5vh;
+                    width: 11vw;
                     margin-top: 30px;
                 }
 
@@ -206,7 +259,7 @@
                 }
 
                 .video-description{
-                    font-size: 30px;
+                    font-size: 20px;
                                 font-family: 'Roboto', sans-serif;
                                 color: rgb(10, 10, 10);
                 }
