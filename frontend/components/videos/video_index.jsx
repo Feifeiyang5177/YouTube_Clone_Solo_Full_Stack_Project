@@ -16,7 +16,7 @@ class VideoIndex extends React.Component {
       <VideoIndexItem key={video.id} video={video}/>
     ));
     return (
-      <div classsName="video-index-page">
+      <div className="video-index-page">
           <div className='video-lines'>{VideoItems}</div>
       </div>
     )

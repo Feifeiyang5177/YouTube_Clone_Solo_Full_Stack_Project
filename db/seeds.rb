@@ -25,18 +25,6 @@ video1 = Video.create!(title: 'Introduction', creator_id: user1.id, description:
 intro1 = URI.open("https://yatube-seeds.s3.amazonaws.com/demo1.MOV")
 video1.vd.attach(io: intro1, filename:"demo1.MOV")
 
-video2 = Video.create!(title: 'Face Changing App', creator_id: user2.id, description: "Second video is up!", view_count: 0)
-demo2 = URI.open('https://yatube-seeds.s3.amazonaws.com/demo2.MP4')
-video2.vd.attach(io: demo2, filename:'demo2.MP4')
-
-video3 = Video.create!(title: 'My Movie Trailer', creator_id: user3.id, description: "Facing changing app video!", view_count: 0)
-demo3 = URI.open('https://yatube-seeds.s3.amazonaws.com/demo3.mov')
-video3.vd.attach(io: demo3, filename:'demo3.mov')
-
-video4 = Video.create!(title: 'Ancient Warrior', creator_id: user4.id, description: "On the ancient style movie", view_count: 0)
-demo4 = URI.open('https://yatube-seeds.s3.amazonaws.com/demo4.MP4')
-video4.vd.attach(io: demo4, filename:'demo4.MP4')
-
 video5 = Video.create!(title: 'Maleficent Trailer', creator_id: user1.id, description: "Short version of Maleficent movie trailer", view_count: 0)
 demo5 = URI.open('https://yatube-seeds.s3.amazonaws.com/demo5.MOV')
 video5.vd.attach(io: demo5, filename:'demo5.MOV')

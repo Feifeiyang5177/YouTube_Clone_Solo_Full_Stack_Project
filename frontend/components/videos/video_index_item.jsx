@@ -6,7 +6,9 @@ class VideoIndexItem extends React.Component {
     constructor(props) {
         super(props)
     }
-
+handleClick(){
+    this.props.video.view_count += 1
+}
 
     render(){
         const {video} = this.props;
@@ -21,7 +23,7 @@ class VideoIndexItem extends React.Component {
                            
                                 <div className="group-video-title">{video.title}</div>
                                 <div className="group-video-creator">Feifei</div>
-                                <div className="group-video-creator">54 views  • 3 days ago</div>
+                                <div className="group-video-creator">{video.view_count} views • 3 days ago</div>
                             
                     </div>
 
