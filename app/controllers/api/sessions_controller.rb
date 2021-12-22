@@ -12,7 +12,11 @@ class Api::SessionsController < ApplicationController
   def destroy
     logout!
     render json: { message: 'Logout successful.' }
-  end
+  end  
+
+
+
+
 end
 
 

@@ -18,7 +18,7 @@ export const logIn = user => (
     })
 );
 
-
+ 
 // Delete Session
 export const logOut = () => (
     $.ajax({

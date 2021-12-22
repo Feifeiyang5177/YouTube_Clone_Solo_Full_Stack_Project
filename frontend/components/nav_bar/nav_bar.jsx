@@ -4,19 +4,24 @@ import { Link } from 'react-router-dom';
 import { AiOutlineSearch} from "react-icons/ai";
 import {AiOutlineMenu} from "react-icons/ai";
 import {BiVideoPlus} from "react-icons/bi";
+import {CgProfile} from "react-icons/cg";
 
 export default ({ currentUser, logout }) => {
 const display = currentUser ? (
-    <div >
-      <button className='button' onClick={logout}>Sign out</button>
-    </div>
-  ) : (
-   
-    <div className='session-bar'>
-      <Link className="btn-sign-up" to="/signup"><span className="sign-up">Sign Up </span></Link>
-      <Link className="btn-sign-in" to="/login">Sign In</Link>
-    </div>
-  );
+  <div>
+    <button className="button" onClick={logout}>
+      Sign out
+    </button>
+  </div>
+) : (
+  <div className="session-bar">
+    {/* <Link className="btn-sign-up" to="/signup"><span className="sign-up">Sign Up </span></Link> */}
+    <Link className="btn-sign-in" to="/login">
+      <CgProfile className="Sign-in-icon"/>
+      <span className="sign-in-font">SIGN IN</span>
+    </Link>
+  </div>
+);
 
   return (
     // <div className="header">
