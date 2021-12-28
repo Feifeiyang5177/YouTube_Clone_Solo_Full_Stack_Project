@@ -8,16 +8,18 @@ import {CgProfile} from "react-icons/cg";
 
 export default ({ currentUser, logout }) => {
 const display = currentUser ? (
-  <div>
-    <button className="button" onClick={logout}>
-      Sign out
+  <div className="session-bar">
+    <button className="btn-sign-out" onClick={logout}>
+      <CgProfile className="Sign-out-icon" />
+      {/* <span className="sign-in-font">SIGN OUT</span> */}
+      {/* <span className="sign-in-font">SIGN OUT</span> */}
     </button>
   </div>
 ) : (
   <div className="session-bar">
     {/* <Link className="btn-sign-up" to="/signup"><span className="sign-up">Sign Up </span></Link> */}
     <Link className="btn-sign-in" to="/login">
-      <CgProfile className="Sign-in-icon"/>
+      <CgProfile className="Sign-in-icon" />
       <span className="sign-in-font">SIGN IN</span>
     </Link>
   </div>

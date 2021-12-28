@@ -13,15 +13,16 @@ export default () => (
   <div>
     <header>
       {/* <SideBarContainer /> */}
-      <NavBarContainer />
+      {/* <NavBarContainer /> */}
+      <Route exact path="/" component={NavBarContainer} />
       <Route exact path="/" component={SideBarContainer} />
     </header>
     <Switch>
+      <AuthRoute path="/login" component={LoginContainer} />
+      <AuthRoute exact path="/signup" component={SignupContainer} />
       {/* <Route path="/sidebar" component={SideBarContainer} /> */}
       <Route exact path="/" component={VideoIndexContainer} />
       <Route exact path="/videos/:videoId" component={VideoShowContainer} />
-      <AuthRoute exact path="/login" component={LoginContainer} />
-      <AuthRoute exact path="/signup" component={SignupContainer} />
       {/* <Route exact path="/videos" component={VideoIndexContainer} /> */}
     </Switch>
   </div>

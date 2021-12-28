@@ -60,6 +60,8 @@ html, body, div {
         color: black;
         font-weight: bold;
       }
+
+
     .tube {
         position: center;
         font-weight: 800;
@@ -234,7 +236,7 @@ html, body, div {
     width: 25px;
     min-width: 20px;
     margin-left: 10%;
-    margin-right: 7%;
+    margin-right: 5%;
   }
 
   .sign-in-font{
@@ -248,7 +250,39 @@ html, body, div {
   // background-color: rgb(240, 240, 240);
   // box-shadow: 1px 1px 1px rgb(66, 66, 66);
   // }
-        
+   .btn-sign-out{
+    background-color:transparent;
+    // border: 0.5px solid #2577e2;
+    border: none;
+    color: #2577e2;
+    // text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    // justify-content: space-between;
+    border-radius: 2px;
+    cursor: pointer;
+    height: 38px;
+    width: 10vw;
+   }    
+      .Sign-out-icon{
+    height: 40px;
+    min-height: 20px;
+    width: 40px;
+    min-width: 20px;
+    margin-left: 10%;
+    margin-right: 7%;
+  }
+
+  .sign-out-font{
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    color: #2577e2;
+    // font-weight: bold;
+  }
+
+
     
   
     

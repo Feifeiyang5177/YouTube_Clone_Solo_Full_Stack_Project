@@ -3,11 +3,11 @@ import { connect } from "react-redux";
 import { signUp, logIn, clearErrors } from "../../actions/session_actions";
 import { Link } from "react-router-dom";
 import SignupForm from "./signup_form";
-
+ 
 const mSTP = (state) => {
   return {
     errors: state.errors.sessionErrors,
-    formLink: <Link to="/login">Sign in instead</Link>,
+    // formLink: <Link to="/login">Sign in instead</Link>,
   };
 };
 

@@ -2,7 +2,7 @@ import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from '../actions/session_ac
 
 const _nullSession =  Object.freeze({
   id: null
-});
+}); 
 
 export default (oldState = _nullSession, action) => {
   Object.freeze(oldState);
