@@ -225,7 +225,9 @@ html, body, div {
     border-radius: 2px;
     cursor: pointer;
     height: 38px;
+    min-height: 38px;
     width: 10vw;
+    min-width: 10vw;
     // padding-left: 10px;
     // margin: 5px, 11px;
     // margin-top: 8%;
@@ -243,13 +245,9 @@ html, body, div {
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
     color: #2577e2;
-    // font-weight: bold;
 
   }
-  // .btn-sign-in:hover {
-  // background-color: rgb(240, 240, 240);
-  // box-shadow: 1px 1px 1px rgb(66, 66, 66);
-  // }
+
    .btn-sign-out{
     background-color:transparent;
     // border: 0.5px solid #2577e2;
