@@ -14,6 +14,9 @@ class Signup extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.loginDemo = this.loginDemo.bind(this);
   }
+  componentDidMount() {
+    this.props.clearErrors();
+  }
 
   handleInput(type) {
     return (e) => {
@@ -42,10 +45,7 @@ class Signup extends React.Component {
     return (
       <div className="signin-errors">
         {(this.props.errors || []).map((error, i) => (
-          <li 
-          key={i}>
-            {error}
-          </li>
+          <li key={i}>{error}</li>
         ))}
       </div>
     );

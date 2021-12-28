@@ -14,6 +14,10 @@ class Login extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    this.props.clearErrors();
+  }
+
   handleInput(type) {
     return (e) => {
       this.setState({ [type]: e.target.value });
@@ -28,10 +32,7 @@ class Login extends React.Component {
     return (
       <div>
         {(this.props.errors || []).map((error, i) => (
-          <div
-            className="signin-errors"
-            key={i}
-          >
+          <div className="signin-errors" key={i}>
             {error}
           </div>
         ))}

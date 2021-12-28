@@ -197,40 +197,22 @@ html, body, div {
   background-color: rgb(240, 240, 240);
   box-shadow: 1px 1px 1px rgb(66, 66, 66);
   }
-  //  .btn-sign-in {
-  //   background-color: white;
-  //   height: 30px;
-  //   width: 60px;
-  //   display: flex;
-  //   align-items: center;
-  //   // padding: 5px;
-  //   box-shadow: 1px 1px 1px 1px rgb(164, 164, 167);
-  //   text-decoration:rgb(25, 25, 26);
-  //   border-radius: 10%;
-  //   background-color: rgb(248, 246, 246);
-  //   margin-right: 5px;
-  //   margin-left: 10px;
-  // }
 
   .btn-sign-in{
     background-color:transparent;
     border: 0.5px solid #2577e2;
     color: #2577e2;
-    // text-align: center;
     text-decoration: none;
     display: flex;
     align-items: center;
-    flex-direction: row;
-    // justify-content: space-between;
+    flex-direction: row; 
     border-radius: 2px;
     cursor: pointer;
     height: 38px;
     min-height: 38px;
     width: 10vw;
     min-width: 10vw;
-    // padding-left: 10px;
-    // margin: 5px, 11px;
-    // margin-top: 8%;
+  
   }
   .Sign-in-icon{
     height: 25px;

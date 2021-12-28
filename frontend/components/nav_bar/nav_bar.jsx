@@ -12,7 +12,6 @@ const display = currentUser ? (
     <button className="btn-sign-out" onClick={logout}>
       <CgProfile className="Sign-out-icon" />
       {/* <span className="sign-in-font">SIGN OUT</span> */}
-      {/* <span className="sign-in-font">SIGN OUT</span> */}
     </button>
   </div>
 ) : (
@@ -24,6 +23,14 @@ const display = currentUser ? (
     </Link>
   </div>
 );
+
+// handelClick(){
+//   <form action="/action_page.php">
+//   <label for="myfile">Select a file:</label>
+//   <input type="file" id="myfile" name="myfile"><br><br>
+//   <input type="submit">
+// </form>
+// }
 
   return (
     // <div className="header">
@@ -52,7 +59,9 @@ const display = currentUser ? (
       </div>
 
       <div className="camera-icon-and-session-btn">
+        {/* <input className="camera-icon-button" type="file"/> */}
         <BiVideoPlus className="camera-icon" />
+        {/* <input type="submit" /> */}
         {display}
       </div>
     </div>
