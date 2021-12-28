@@ -65,7 +65,7 @@ class Signup extends React.Component {
 
   render() {
     return (
-      <div className="session-form-sign-up">
+      <div className="session-form">
         <form className="content-form">
           <img className="session-logo-img" src={window.yatubeLogoURL} />
           <h2 className="title">Sign Up</h2>
