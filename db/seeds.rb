@@ -25,10 +25,10 @@ video1 = Video.create!(title: 'Introduction', creator_id: user1.id, description:
 intro1 = URI.open("https://yatube-seeds.s3.amazonaws.com/demo1.MOV")
 video1.vd.attach(io: intro1, filename:"demo1.MOV")
 
-video5 = Video.create!(title: 'Maleficent Trailer', creator_id: user1.id, description: "Short version of Maleficent movie trailer", view_count: 0)
+video2 = Video.create!(title: 'Maleficent Trailer', creator_id: user1.id, description: "Short version of Maleficent movie trailer", view_count: 0)
 demo5 = URI.open('https://yatube-seeds.s3.amazonaws.com/demo5.MOV')
-video5.vd.attach(io: demo5, filename:'demo5.MOV')
+video2.vd.attach(io: demo5, filename:'demo5.MOV')
 
-video6 = Video.create!(title: 'Summer', creator_id: user2.id, description: "Erhu and piano playing Summer", view_count: 0)
+video3 = Video.create!(title: 'Summer', creator_id: user2.id, description: "Erhu and piano playing Summer", view_count: 0)
 demo6 = URI.open('https://yatube-seeds.s3.amazonaws.com/demo6.MOV')
-video6.vd.attach(io: demo6, filename:'demo6.MOV')
+video3.vd.attach(io: demo6, filename:'demo6.MOV')
