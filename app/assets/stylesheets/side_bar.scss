@@ -1,5 +1,5 @@
 .sidebar-parent{
-    // height: 0px;
+    height: 100%;
     // width: 100px;
      position: fixed;
     //  z-index: 10;
@@ -11,7 +11,7 @@
     flex-direction: column;
     width: 70px;
     align-items: center;
-    z-index: 10;
+    z-index: 10; 
     // padding-top: 80px;
     
    
@@ -28,6 +28,7 @@
     // margin-left: 10px;
     text-align: center;
     background-color: white;
+    margin-bottom: 50%;
   
 
 }

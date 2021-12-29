@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { MdError } from "react-icons/md";
 
 class Signup extends React.Component {
   constructor(props) {
@@ -43,9 +44,13 @@ class Signup extends React.Component {
 
   renderErrors() {
     return (
-      <div className="signin-errors">
+      <div className="signup-errors">
         {(this.props.errors || []).map((error, i) => (
-          <li key={i}>{error}</li>
+          // <li key={i}>{error}</li>
+          <div className="signup-error" key={i}>
+            <MdError className="error-icon" />
+            <div className="error-messages">{error}</div>
+          </div>
         ))}
       </div>
     );
@@ -105,14 +110,18 @@ class Signup extends React.Component {
               />
             </label>
           </div>
+
           {this.renderErrors()}
+
           <button className="button" onClick={this.handleSubmit}>
             Next
           </button>
           <br></br>
+          
           <button className="button2" onClick={this.loginDemo}>
-            Demo
+            Login as Demo User
           </button>
+        
         </form>
       </div>
     );

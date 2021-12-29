@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {MdError} from 'react-icons/md';
 
 
 class Login extends React.Component {
@@ -44,7 +45,8 @@ class Login extends React.Component {
       <div>
         {(this.props.errors || []).map((error, i) => (
           <div className="signin-errors" key={i}>
-            {error}
+            <MdError className="error-icon" />
+            <div className="error-messages">{error}</div>
           </div>
         ))}
       </div>
@@ -90,7 +92,7 @@ class Login extends React.Component {
                 onChange={this.handleInput("password")}
               />
             </label>
-            {this.renderErrors()}
+              {this.renderErrors()}  
           </div>
 
           <button className="button" onClick={this.handleSubmit}>
@@ -98,12 +100,14 @@ class Login extends React.Component {
           </button>
 
           <div className="signup-and-demo-user-session">
-          <Link className="signup-link" to="/signup">Create Account</Link><div> or </div>
-          <button className="login-page-demo-user" onClick={this.loginDemo}>
-            Demo Login
-          </button>
+            <Link className="signup-link" to="/signup">
+              Create Account
+            </Link>
+            <div> or </div>
+            <button className="login-page-demo-user" onClick={this.loginDemo}>
+              Demo Login
+            </button>
           </div>
-
         </form>
       </div>
     );

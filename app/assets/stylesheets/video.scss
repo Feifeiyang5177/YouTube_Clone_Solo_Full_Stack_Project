@@ -38,22 +38,22 @@
     flex-direction: column;
     flex-wrap: wrap;
     width: 30vw;
+    max-width: 30vw;
     height: 45vh;
+    max-height: 45vh;
     //will not shrink in to the side bar
     margin-left: 100px;
-    // background-color: transparent;
     background-color: transparent;
-    // margin-bottom: 0%;
-    // padding-top: 20px;
-    // border-top: 1px solid rgb(172, 172, 171);
-    // border-bottom: none;
+  
 
 }
         .group-video-each{
             // height: 200px;
             // width: 300px;
             height: 25vh;
+            max-height: 25vh;
             width: 24vw;
+            max-width: 24vw;
             display: flex;
             background-color: black;
             margin-right: 5px;
