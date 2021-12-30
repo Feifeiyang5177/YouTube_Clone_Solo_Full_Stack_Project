@@ -42,9 +42,9 @@ class Login extends React.Component {
 
   renderErrors() {
     return (
-      <div>
+      <div className="signin-errors">
         {(this.props.errors || []).map((error, i) => (
-          <div className="signin-errors" key={i}>
+          <div className="signin-error" key={i}>
             <MdError className="error-icon" />
             <div className="error-messages">{error}</div>
           </div>
@@ -92,7 +92,7 @@ class Login extends React.Component {
                 onChange={this.handleInput("password")}
               />
             </label>
-              {this.renderErrors()}  
+            {this.renderErrors()}
           </div>
 
           <button className="button" onClick={this.handleSubmit}>
@@ -103,12 +103,37 @@ class Login extends React.Component {
             <Link className="signup-link" to="/signup">
               Create Account
             </Link>
-            <div> or </div>
+            {/* <div> or </div> */}
             <button className="login-page-demo-user" onClick={this.loginDemo}>
               Demo Login
             </button>
           </div>
         </form>
+
+        <footer className="footer">
+          <div className="footer-left">English(United States)</div>
+          <div className="footer-right">
+            <div className="f-r-content">
+              <a href="https://feifeiyang-swe.com/" target="_blank">
+                Portfolio
+              </a>
+            </div>
+            <div className="f-r-content">
+              <a
+                href="https://www.linkedin.com/in/feifei-yang-6990bb38/"
+                target="_blank"
+              >
+                LinkedIn
+              </a>
+            </div>
+
+            <div className="f-r-content">
+              <a href="https://github.com/Feifeiyang5177" target="_blank">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </footer>
       </div>
     );
   }

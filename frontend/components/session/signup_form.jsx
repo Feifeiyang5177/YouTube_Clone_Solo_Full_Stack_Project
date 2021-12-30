@@ -14,6 +14,7 @@ class Signup extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.loginDemo = this.loginDemo.bind(this);
+   
   }
   componentDidMount() {
     this.props.clearErrors();
@@ -56,17 +57,20 @@ class Signup extends React.Component {
     );
   }
 
-  // renderErrors() {
+  // renderNameErrors(){
   //   return (
-  //     <ul>
-  //       {Object.keys(this.state.errors).map((error, i) => (
-  //         <li style={{ marginBottom: 10 }} key={`error-${i}`}>
-  //           {this.state.errors[error]}
-  //         </li>
-  //       ))}
-  //     </ul>
+  //     <div className="signup-errors">
+  //       <div className="signup-error">
+  //         <div className="error-icon">
+  //           <MdError />
+  //         </div>
+  //         <div className="error-messages">{this.props.errors[0]}</div>
+  //       </div>
+  //     </div>
   //   );
+
   // }
+
 
   render() {
     return (
@@ -84,7 +88,6 @@ class Signup extends React.Component {
                 type="text"
                 value={this.state.username}
                 placeholder="Username"
-                // size="70"
                 onChange={this.handleInput("username")}
               />
             </label>
@@ -95,7 +98,6 @@ class Signup extends React.Component {
                 type="text"
                 value={this.state.email}
                 placeholder="Email"
-                // size="70"
                 onChange={this.handleInput("email")}
               />
             </label>
@@ -109,20 +111,46 @@ class Signup extends React.Component {
                 onChange={this.handleInput("password")}
               />
             </label>
+            {this.renderErrors()}
           </div>
-
-          {this.renderErrors()}
 
           <button className="button" onClick={this.handleSubmit}>
             Next
           </button>
           <br></br>
-          
+
           <button className="button2" onClick={this.loginDemo}>
-            Login as Demo User
+            Demo User Login
           </button>
-        
         </form>
+
+        <footer className="footer">
+          <div className="footer-left">English(United States)</div>
+          <div className="footer-right">
+            <div className="f-r-content">
+              <a href="https://feifeiyang-swe.com/" target="_blank">
+                Portfolio
+              </a>
+            </div>
+            <div className="f-r-content">
+              <a
+                href="https://www.linkedin.com/in/feifei-yang-6990bb38/"
+                target="_blank"
+              >
+                LinkedIn
+              </a>
+            </div>
+
+            <div className="f-r-content">
+              <a
+                href="https://github.com/Feifeiyang5177/FullStack_Project"
+                target="_blank"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+        </footer>
       </div>
     );
   }
