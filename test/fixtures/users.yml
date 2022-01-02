@@ -3,6 +3,7 @@
 # Table name: users
 #
 #  id              :bigint           not null, primary key
+#  color           :string
 #  email           :string
 #  password_digest :string
 #  session_token   :string

@@ -9,6 +9,10 @@
 #  user_id    :integer          not null
 #  video_id   :integer          not null
 #
+# Indexes
+#
+#  index_likes_on_user_id  (user_id)
+#
 require 'test_helper'
 
 class LikeTest < ActiveSupport::TestCase

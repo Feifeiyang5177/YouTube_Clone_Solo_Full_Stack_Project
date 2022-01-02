@@ -103,6 +103,7 @@ class VideoShow extends React.Component {
 
     componentDidMount(){  
         this.props.fetchVideo(this.props.match.params.videoId);
+        this.props.addViews(this.props.currentVideoId);
         this.props.fetchVideos();
     }
 

@@ -15,3 +15,10 @@ export const fetchVideo = (videoId) => {
         method: 'GET'
     })
 }
+
+export const addViews = (videoId) => {
+  return $.ajax({
+    method: "POST",
+    url: `/api/videos/${videoId}/add_views`,
+  });
+};

@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: likes
+#
+#  id         :bigint           not null, primary key
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  comment_id :integer          not null
+#  user_id    :integer          not null
+#  video_id   :integer          not null
+#
+# Indexes
+#
+#  index_likes_on_user_id  (user_id)
+#
 class Like < ApplicationRecord
 
   #validates :user_id, uniqueness: { scope: [:likeable_id, :likeable_type] }

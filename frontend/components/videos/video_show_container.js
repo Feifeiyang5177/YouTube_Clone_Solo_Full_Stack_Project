@@ -1,5 +1,5 @@
 import {connect} from "react-redux";
-import {fetchVideo, fetchVideos} from '../../actions/videos_action';
+import { addViews, fetchVideo, fetchVideos } from "../../actions/videos_action";
 import VideoShow from "./video_show";
 
 const mSTP = (state, ownProps) => ({
@@ -8,8 +8,9 @@ const mSTP = (state, ownProps) => ({
 })
  
 const mDTP = (dispatch) => ({
+  addViews: (videoId) => dispatch(addViews(videoId)),
   fetchVideo: (videoId) => dispatch(fetchVideo(videoId)),
-  fetchVideos: () => dispatch(fetchVideos())
+  fetchVideos: () => dispatch(fetchVideos()),
 });
 
 export default connect(mSTP, mDTP)(VideoShow)

@@ -3,6 +3,7 @@
 # Table name: users
 #
 #  id              :bigint           not null, primary key
+#  color           :string
 #  email           :string
 #  password_digest :string
 #  session_token   :string
@@ -18,7 +19,7 @@
 class User < ApplicationRecord
     attr_reader :password
 
-    validates :username, presence: true, uniqueness: true
+    validates :username, :email, presence: true, uniqueness: true
     validates :password_digest, :session_token, presence: true
     validates :password, length: { minimum: 6 }, allow_nil: true
     #validates :email, formate: { with: URI::MailTo::EMAIL_REGEXP }
