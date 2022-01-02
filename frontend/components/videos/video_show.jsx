@@ -142,7 +142,7 @@ class VideoShow extends React.Component {
                 </div>
                 <div className="video-view-count-container">
                   <div className="video-view-count">
-                    {video.view_count} views • Nov 8, 2021
+                    {video.view_count} views • {video.created_at}
                   </div>
                   <div className="video-likes-icons">
                     <div className="inner-content">
@@ -205,7 +205,9 @@ class VideoShow extends React.Component {
                       ></input>
                       <div className="comment-imput-buttons">
                         {/* <div className="floating-buttons"> */}
-                        <button className="actual-button-comment">COMMENT</button>
+                        <button className="actual-button-comment">
+                          COMMENT
+                        </button>
                         <button className="actual-button-cancel">CANCEL</button>
                         {/* </div> */}
                       </div>

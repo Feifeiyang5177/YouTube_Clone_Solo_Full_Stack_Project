@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2021_11_04_194758) do
     t.string "email"
     t.index ["session_token"], name: "index_users_on_session_token"
     t.index ["username"], name: "index_users_on_username", unique: true
-  end
+  end 
 
   create_table "videos", force: :cascade do |t|
     t.string "title", null: false

@@ -23,10 +23,17 @@ class Api::VideosController < ApplicationController
         @video = Video.find(params[:id])
         render :show
     end 
+    
+    def add_views
+    @video = Video.find_by_id(params[:id])
+    @video.views += 1
+    @video.save
+    render :views
+  end
 
     private
     def video_params
-        params.require(:video).permit(:title, :creator_id, :description, :view_count, :vd)
+        params.require(:video).permit(:title, :creator_id, :description, :view_count, :vd, :created_at)
     end 
 
 end

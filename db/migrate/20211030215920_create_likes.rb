@@ -4,7 +4,7 @@ class CreateLikes < ActiveRecord::Migration[5.2]
       t.integer :video_id, null: false
       t.integer :creator_id, null: false
       t.integer :comment_id, null: false
-      t.timestamps
+      t.timestamps 
     end
   end
-end
+end 

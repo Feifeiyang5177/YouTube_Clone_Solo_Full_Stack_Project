@@ -6,6 +6,8 @@ Rails.application.routes.draw do
         resources :videos, only: [:index, :create, :show]
 
         resource :session, only: [:create, :destroy]
+        
+        resources :likes, only: [:create, :destroy]
     end 
     root to: 'root#root'
 end 
