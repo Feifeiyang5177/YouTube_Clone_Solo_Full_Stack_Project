@@ -1,0 +1,1 @@
+json.uploadedAt time_ago_in_words(video.created_at)

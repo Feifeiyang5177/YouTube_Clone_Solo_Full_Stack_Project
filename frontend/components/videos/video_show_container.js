@@ -11,6 +11,7 @@ const mDTP = (dispatch) => ({
   addViews: (videoId) => dispatch(addViews(videoId)),
   fetchVideo: (videoId) => dispatch(fetchVideo(videoId)),
   fetchVideos: () => dispatch(fetchVideos()),
+  
 });
 
 export default connect(mSTP, mDTP)(VideoShow)

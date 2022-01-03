@@ -20,8 +20,12 @@ class Video < ApplicationRecord
     validates :title, :description, :creator_id, presence: true
 
     has_one_attached :vd
-   
 
+    has_many :likes,
+    foreign_key: :video_id,
+    class_name: :Likes  
+    
+   
     belongs_to :creator,
     foreign_key: :creator_id,
     class_name: :User 

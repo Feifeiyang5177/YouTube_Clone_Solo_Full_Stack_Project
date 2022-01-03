@@ -1,42 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 
 class VideoIndexItem extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-handleClick(){
-    this.props.video.view_count += 1
-}
+  constructor(props) {
+    super(props);
+  }
+  handleClick() {
+    this.props.video.view_count += 1;
+  }
 
-    render(){
-        const {video} = this.props;
+//   componentDidMount() {
+//     // this.props.fetchVideo(this.props.match.params.videoId);
+//     // this.props.addViews(this.props.currentVideoId);
+//     this.props.fetchVideos();
+//   }
 
-        return (
-            <div className="video-index-item-page">
-                <div className="video-section">
-                    <Link to={`videos/${video.id}`}>
-                        <video className="group-video-each" src={video.vdUrl} controls></video>
-                    </Link>
-                    <div className="group-video-title-container">
-                           
-                                <div className="group-video-title">{video.title}</div>
-                                <div className="group-video-creator">Feifei</div>
-                                <div className="group-video-creator">{video.view_count} views • 3 days ago</div>
-                            
-                    </div>
+  render() {
+    const { video, currentUserId } = this.props;
 
-
-                </div>
-
+    return (
+      <div className="video-index-item-page">
+        <div className="video-section">
+          <Link to={`videos/${video.id}`}>
+            <video
+              className="group-video-each"
+              src={video.vdUrl}
+              controls
+            ></video>
+          </Link>
+          <div className="group-video-title-container">
+            <div className="group-video-title">{video.title}</div>
+            <div className="group-video-creator">{this.props.currentUser}Feifei</div>
+            <div className="group-video-creator">
+              {video.view_count} views • {video.updated_at} days ago
             </div>
-           
-        )
-
-    }
-
-
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default VideoIndexItem
