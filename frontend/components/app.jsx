@@ -7,6 +7,7 @@ import { Route, Switch} from 'react-router-dom';
 import {AuthRoute, ProtectedRoute} from '../util/route_utils';
 import VideoShowContainer from './videos/video_show_container';
 import SideBarContainer from './side_bar/side_bar_container'
+import SearchBarContainer from './nav_bar/search_bar_container';
 
 
 export default () => (
@@ -23,6 +24,7 @@ export default () => (
       {/* <Route path="/sidebar" component={SideBarContainer} /> */}
       <Route exact path="/" component={VideoIndexContainer} />
       <Route exact path="/videos/:videoId" component={VideoShowContainer} />
+      <Route path="/result/:search" component={SearchBarContainer} />
       {/* <Route exact path="/videos" component={VideoIndexContainer} /> */}
     </Switch>
   </div>

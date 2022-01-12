@@ -23,8 +23,6 @@ class VideoShow extends React.Component {
         // this.updateViewCount = true;
     }
 
-  
-
     render(){
         
         const {video, videos} = this.props;
