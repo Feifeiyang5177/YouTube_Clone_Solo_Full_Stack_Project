@@ -17,9 +17,10 @@ class VideoIndex extends React.Component {
     ));
     return (
       <div className="video-index-page">
-          <div className='video-lines'>{VideoItems}</div>
+        <p className="search-result-title">Search Result:</p>
+        <div className="video-lines">{VideoItems}</div>
       </div>
-    )
+    );
   }
 
 }

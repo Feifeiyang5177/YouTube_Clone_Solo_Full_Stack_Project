@@ -84,13 +84,14 @@ html, body, div {
     // search and create icon
     .search-bar-and-icon{
       display: flex;
+      flex-direction: column;
       
     }
 
 
     .search-bar {
           display: flex;
-          position: relative;
+          // position:static;
           align-items: center;
           height: 40px;
           // max-height: 6vh;
@@ -103,8 +104,27 @@ html, body, div {
           border-right: 0;
           border: solid rgb(196, 196, 196) 1px;
           border-radius: 2px;
+          // padding-top: 1px;
       
 
+    }
+    .search-result {
+      position: relative;
+      padding-top: 5px;
+      border-bottom: 1px solid rgb(231, 231, 231);
+      border-left: 1px solid  rgb(187, 185, 185);
+      border-right: 1px solid  rgb(187, 185, 185);
+    }
+    .search-result-names{
+      font-size: 15px;
+      font-family: sans-serif;
+      color: rgb(121, 119, 119);
+      // margin-top: 1px;
+      // margin-bottom: 1px solid rgb(231, 231, 231);;
+    }
+  
+    .search-button-and-close-icon{
+      display: flex;
     }
     .search-button{
           background-color: rgb(248, 248, 248);
@@ -118,7 +138,29 @@ html, body, div {
           border-top: none;
           border-right: none;
           margin-left: auto;
+          
     }
+    .search-button :hover{
+      
+      color:#2577e2
+    }
+
+        .search-close-icon{
+            width: 26px; 
+            min-width: 20px;
+            height: 26px;
+            min-height: 20px;
+            display: flex;
+            align-items: center;
+            // margin-left: 10%;
+            margin-right: 5%;
+
+            margin-top: 5px;
+        }
+        .search-close-icon :hover{
+            color: red;
+        }
+    
           .search-icon{
             width: 26px; 
             min-width: 20px;
@@ -130,6 +172,11 @@ html, body, div {
             margin-left: 20%;
             margin-top: 5px;
           }
+          .search-icon :hover{
+      
+            color:#2577e2
+          }
+
           .search-input {
             flex: 1;
             height: 50%;
@@ -139,12 +186,12 @@ html, body, div {
             margin-left: 10px;
           }
 
+         
+
   .camera-icon-and-session-btn{
     display: flex;
-    // margin-right: 10px;
     width: 27vw;
     height: 56px;
-    // padding-top: 5px;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
@@ -169,8 +216,10 @@ html, body, div {
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   font-size: 15px;
+
   // background-color: aqua;
 }
+
   .btn-sign-up {
     background-color: rgb(248, 248, 248);
     display: flex;

@@ -45,6 +45,10 @@ class VideoShow extends React.Component {
               </div>
               //   </Link>
             );
+            }else {
+              return (
+                <div></div>
+              )
             }
         });
         // if (this.updateViewCount) {
@@ -60,7 +64,7 @@ class VideoShow extends React.Component {
           <div className="video-show-page">
             <div className="video-container">
               <video className="singleVideo" src={video.vdUrl} controls></video>
-
+ 
               <div className="video-title-section">
                 <div className="video-title-container">
                   <div className="video-title">{video.title}</div>

@@ -4,11 +4,27 @@
 // -------------------------- video index page ----------------------------
 
 // .video-index-page{
+//     display: flex;
+//     flex-direction: column;
     
-//     // background-color: rgb(245, 245, 244);
-     
+//     // background-color: rgb(245, 245, 244);   
 // }
+// .v-i-p{
+//     display: flex;
+//     flex-direction: column;
+// }
+ .search-result-title{
+            font-size: 30px;
+            background-color: white;
+            //  background-color: rgb(245, 245, 244);
+             padding-left: 100px;
+             padding-top: 15px;
+             font-family: 'Raleway', sans-serif;
+             font-weight: bold;
+             border-bottom: 0.5px solid rgb(194, 194, 193);
 
+             
+          }
 .video-lines {
  background-color: rgb(245, 245, 244);
     display: flex;
@@ -18,7 +34,7 @@
     // margin-left: 80px;
     // margin-right: 100px;
     margin-bottom: 25%;
-    padding-top: 100px;
+    padding-top: 40px;
     // margin-top: 150px;
     
 }

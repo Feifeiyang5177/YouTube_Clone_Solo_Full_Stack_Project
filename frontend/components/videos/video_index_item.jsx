@@ -20,7 +20,9 @@ class VideoIndexItem extends React.Component {
     const { video, currentUserId } = this.props;
 
     return (
+        
       <div className="video-index-item-page">
+          
         <div className="video-section">
           <Link to={`videos/${video.id}`}>
             <video
@@ -38,6 +40,7 @@ class VideoIndexItem extends React.Component {
           </div>
         </div>
       </div>
+    
     );
   }
 }

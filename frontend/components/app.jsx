@@ -23,8 +23,9 @@ export default () => (
       <AuthRoute exact path="/signup" component={SignupContainer} />
       {/* <Route path="/sidebar" component={SideBarContainer} /> */}
       <Route exact path="/" component={VideoIndexContainer} />
+      <Route exact path="/search" component={VideoIndexContainer} />
       <Route exact path="/videos/:videoId" component={VideoShowContainer} />
-      <Route path="/result/:search" component={SearchBarContainer} />
+      {/* <Route path="/result/:search" component={SearchBarContainer} /> */}
       {/* <Route exact path="/videos" component={VideoIndexContainer} /> */}
     </Switch>
   </div>
