@@ -130,6 +130,10 @@ function SearchBar (){
         setState([]);
         setWordEntered("")
     };
+
+    const handleClick = () => {
+        <div>Invalid search</div>;
+    }
        
     return (
       <div className="search-bar-and-icon">
@@ -144,7 +148,7 @@ function SearchBar (){
 
           <div className="search-bar-icons">
             {state.length == 0 ? (
-              <button className="search-button">
+              <button className="search-button" onClick={handleClick}>
                 <AiOutlineSearch className="search-icon" />
               </button>
             ) : (
@@ -152,7 +156,6 @@ function SearchBar (){
                 <GrClose className="search-close-icon" onClick={clearInput} />
                 <Link className="search-button" to="/search">
                   <AiOutlineSearch className="search-icon" />
-                  
                 </Link>
               </div>
             )}

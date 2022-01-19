@@ -5,7 +5,7 @@ import VideoShow from "./video_show";
 const mSTP = (state, ownProps) => ({
     video: state.entities.videos[ownProps.match.params.videoId],
     videos: Object.values(state.entities.videos)
-})
+}) 
  
 const mDTP = (dispatch) => ({
   addViews: (videoId) => dispatch(addViews(videoId)),

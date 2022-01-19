@@ -30,7 +30,7 @@ class Signup extends React.Component {
     e.preventDefault();
     this.props
       .signUp(this.state)
-      .then(() => this.props.history.push("/videos"));
+      .then(() => this.props.history.push("/"));
   }
 
   loginDemo() {
