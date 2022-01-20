@@ -3,9 +3,6 @@ import { AiOutlineSearch} from "react-icons/ai";
 import {GrClose} from "react-icons/gr";
 import { Link } from "react-router-dom";
 
-
-
-
 // class SearchBar extends React.Component {
 //   constructor(props) {
 //     super(props);

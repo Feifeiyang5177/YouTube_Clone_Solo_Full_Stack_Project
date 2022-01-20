@@ -10,9 +10,11 @@ import SearchBar from "./search_bar";
 export default ({ currentUser, logout, videos, fetchVideos }) => {
 const display = currentUser ? (
   <div className="session-bar">
-    <button className="btn-sign-out" onClick={logout}>
-      <CgProfile className="Sign-out-icon" />
-    </button>
+    <div className="session-bar-tooltip" data-tooltip="Logout">
+      <button className="btn-sign-out" onClick={logout}>
+        <CgProfile className="Sign-out-icon" />
+      </button>     
+    </div>
   </div>
 ) : (
   <div className="session-bar">
