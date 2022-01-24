@@ -27,6 +27,7 @@ export default () => (
       <Route exact path="/videos/:videoId" component={VideoShowContainer} />
       {/* <Route path="/result/:search" component={SearchBarContainer} /> */}
       {/* <Route exact path="/videos" component={VideoIndexContainer} /> */}
+      <Route exact path="/comments/:commentId/edit" component={VideoIndexContainer}/>
     </Switch>
   </div>
 );

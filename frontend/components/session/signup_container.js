@@ -7,17 +7,10 @@ import SignupForm from "./signup_form";
 const mSTP = (state) => {
   return {
     errors: state.errors.sessionErrors,
-    // formLink: <Link to="/login">Sign in instead</Link>,
+    
   };
 };
 
-// const mSTP = (state) => {
-//   return {
-//     user: { username: "", email: "", password: "" },
-//     errors: state.errorsReducer.sessionErrors,
-//     formType: "Please Create Your YaTube Account"
-//   };
-// };
 
 const mDTP = (dispatch) => ({
   signUp: (formUser) => dispatch(signUp(formUser)),

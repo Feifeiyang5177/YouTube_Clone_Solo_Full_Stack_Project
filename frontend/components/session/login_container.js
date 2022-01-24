@@ -5,7 +5,7 @@ import Login from './login_form';
 const mSTP = (state) => {
   return {
     errors: state.errors.sessionErrors,
-    // formLink: <Link to="/login">Sign in instead</Link>,
+    
   };
 };
 

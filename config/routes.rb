@@ -1,4 +1,4 @@
-
+ 
 Rails.application.routes.draw do 
     namespace :api, defaults: {format: :json} do
         resources :users, except: [:update]
@@ -10,6 +10,8 @@ Rails.application.routes.draw do
         resource :session, only: [:create, :destroy]
 
         resources :likes, only: [:create, :destroy]
+
+        resources :comments, only: [:index, :create, :update, :show, :destroy]
     end 
     root to: 'root#root'
 end 

@@ -115,12 +115,9 @@ function SearchBar (){
         })
         if (searchWord === "") {
                 setState([])
-            } 
-            // else if (!newFilter.includes(searchWord)) {
-            //     setState([]);
-            //     // setWordEntered("");  
-            // }  
-            else {setState(newFilter)} }
+            }  
+            else {setState(newFilter)} 
+          }
         
 
     const clearInput = () => {
@@ -178,10 +175,3 @@ function SearchBar (){
 
 export default SearchBar
 
-//  {
-//    state.length != 0 && (
-//      <Link className="search-button" to="/search">
-//        <AiOutlineSearch className="search-icon" />
-//      </Link>
-//    );
-//  }

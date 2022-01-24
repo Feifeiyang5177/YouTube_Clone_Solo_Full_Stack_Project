@@ -25,11 +25,11 @@ class Api::VideosController < ApplicationController
     end 
 
     def add_views
-    @video = Video.find_by_id(params[:id])
-    @video.view_count += 1
-    @video.save
-    render :views
-  end
+        @video = Video.find_by_id(params[:id])
+        @video.view_count += 1
+        @video.save
+        render :views
+    end
 
     private
     def video_params

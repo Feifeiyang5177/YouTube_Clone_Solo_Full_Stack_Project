@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_02_060135) do
+ActiveRecord::Schema.define(version: 2022_01_21_041717) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(version: 2022_01_02_060135) do
     t.text "body", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "commenter_id", null: false
+    t.index ["video_id"], name: "index_comments_on_video_id"
   end
 
   create_table "likes", force: :cascade do |t|
@@ -62,7 +64,7 @@ ActiveRecord::Schema.define(version: 2022_01_02_060135) do
     t.string "color"
     t.index ["session_token"], name: "index_users_on_session_token"
     t.index ["username"], name: "index_users_on_username", unique: true
-  end
+  end 
 
   create_table "videos", force: :cascade do |t|
     t.string "title", null: false

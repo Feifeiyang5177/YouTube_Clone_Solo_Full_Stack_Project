@@ -7,7 +7,7 @@ const mSTP = (state) => {
   return {
     videos: Object.values(state.entities.videos),
     // currentUserId: state.session.id
-    currentUser: state.session.user
+    currentUser: state.session.currentUser
   };
   
 };

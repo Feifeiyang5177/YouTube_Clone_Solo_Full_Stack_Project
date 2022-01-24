@@ -17,12 +17,21 @@ class VideoIndexItem extends React.Component {
 //   }
 
   render() {
-    const { video, currentUserId } = this.props;
+    const { video, currentUser } = this.props;
+
+    const timeNow = new Date();
+    const oldTime = new Date(video.createdAt);
+    const time = timeNow - oldTime;
+    const timeDays = Math.round(time / (1000 * 3600 * 24));
+    const timeAgo =
+      timeDays < 1
+        ? "less than 1 day ago"
+        : timeDays === 1
+        ? "1 day ago"
+        : `${timeDays} days ago`;
 
     return (
-        
       <div className="video-index-item-page">
-          
         <div className="video-section">
           <Link to={`videos/${video.id}`}>
             <video
@@ -33,14 +42,14 @@ class VideoIndexItem extends React.Component {
           </Link>
           <div className="group-video-title-container">
             <div className="group-video-title">{video.title}</div>
-            <div className="group-video-creator">{this.props.currentUser}Feifei</div>
+            <div className="group-video-creator">{currentUser}Feifei</div>
             <div className="group-video-creator">
-              {video.view_count} views • {video.updated_at} days ago
+              {/* {video.view_count} views • {video.updated_at} days ago */}
+              {video.view_count} views • {video.createdAt} days ago
             </div>
           </div>
         </div>
       </div>
-    
     );
   }
 }

@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {FiThumbsUp, FiThumbsDown, FiMoreHorizontal} from "react-icons/fi";
 import {RiShareForwardLine} from "react-icons/ri";
+import CreateCommentForm from "../comments/comment_form_container";
+import CommentIndex from "../comments/comment_index_container";
 // import VideoIndexItem from "./video_index_item";
 // import VideoIndex from "./video_index";
 
@@ -25,7 +27,7 @@ class VideoShow extends React.Component {
 
     render(){
         
-        const {video, videos} = this.props;
+        const {video, videos, currentUser} = this.props;
         const videoIndex = (videos || []).map((vid, idx) => {
             if (video.id != vid.id){
             return (
@@ -39,7 +41,9 @@ class VideoShow extends React.Component {
                 <div className="s-p-s-v-description-container">
                   <div className="event-text-t">{vid.title}</div>
                   <div className="event-text">{vid.description}</div>
-                  <div className="event-text">Created by user {vid.creator_id}</div>
+                  <div className="event-text">
+                    Created by user {vid.creator_id}
+                  </div>
                   <div className="event-text">{vid.view_count} views</div>
                 </div>
               </div>
@@ -64,7 +68,7 @@ class VideoShow extends React.Component {
           <div className="video-show-page">
             <div className="video-container">
               <video className="singleVideo" src={video.vdUrl} controls></video>
- 
+
               <div className="video-title-section">
                 <div className="video-title-container">
                   <div className="video-title">{video.title}</div>
@@ -84,15 +88,17 @@ class VideoShow extends React.Component {
                       >
                         <FiThumbsUp className="icon" />
                       </button>
-                      <div className="likes-num">{this.state.likes}</div></div>
+                      <div className="likes-num">{this.state.likes}</div>
+                    </div>
 
                     <div className="inner-content">
                       <button
                         className="likes-button"
                         onClick={() =>
                           this.setState({ dislikes: this.state.dislikes + 1 })
-                        }>
-                      <FiThumbsDown className="icon" />
+                        }
+                      >
+                        <FiThumbsDown className="icon" />
                       </button>
                       <div className="likes-num"> {this.state.dislikes}</div>
                     </div>
@@ -116,7 +122,9 @@ class VideoShow extends React.Component {
                   <div className="content">
                     <div className="description-container">
                       <div className="creator">
-                        <div className="creator-name">YaTube User</div>
+                        <div className="creator-name">
+                          YaTube User {video.creator_id}
+                        </div>
                       </div>
                       <div className="red-button">
                         <button className="subscribe-button">SUBSCRIBE</button>
@@ -132,28 +140,21 @@ class VideoShow extends React.Component {
                 {/* </div> */}
 
                 <div className="v-d-s-2">
-                  <div className="comments-section">Comments</div>
+                  <div className="comments-section"> 0 Comments</div>
                   <div className="img-and-comment-input">
                     <img
                       className="comment-user-profile-img"
                       src={window.userProfile2URL}
                     />
-                    <div className="input-box-and-buttons">
-                      <input
-                        className="comments-input"
-                        type="text"
-                        placeholder="Add a public comment..."
-                      ></input>
-                      <div className="comment-imput-buttons">
-                        {/* <div className="floating-buttons"> */}
-                        <button className="actual-button-comment">
-                          COMMENT
-                        </button>
-                        <button className="actual-button-cancel">CANCEL</button>
-                        {/* </div> */}
-                      </div>
-                    </div>
+                    <CreateCommentForm
+                      className="input-box-and-buttons"
+                      video={video}
+                      currentUser={currentUser}
+                    />
                   </div>
+                </div>
+                <div className="comment-content">
+                  <CommentIndex className="comment-content" />
                 </div>
 
                 <div className="v-d-s-3">
@@ -168,23 +169,25 @@ class VideoShow extends React.Component {
                     </div>
 
                     <div className="comment-content">
-                      <p>comments go here</p>
+                      <p>First Comment</p>
 
                       <div className="comment-likes">
                         <div className="inner-content">
                           <FiThumbsUp className="icon" />
-                          <div className="likes-num"> 16</div>
+                          <div className="likes-num"> </div>
                           <FiThumbsDown className="icon" />
-                          <div className="likes-num"> 2</div>
+                          <div className="likes-num"> </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+
+                {/* <div> <CommentIndexItem/></div> */}
               </div>
             </div>
 
-            <div classsName="show-page-video-index">
+            <div className="show-page-video-index">
               <div className="show-page-video-lines">{videoIndex}</div>
             </div>
           </div>
