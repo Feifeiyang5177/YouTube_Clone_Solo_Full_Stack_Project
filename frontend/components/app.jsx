@@ -6,8 +6,10 @@ import VideoIndexContainer from './videos/video_index_container';
 import { Route, Switch} from 'react-router-dom';
 import {AuthRoute, ProtectedRoute} from '../util/route_utils';
 import VideoShowContainer from './videos/video_show_container';
-import SideBarContainer from './side_bar/side_bar_container'
-import SearchBarContainer from './nav_bar/search_bar_container';
+// import SearchBarContainer from './nav_bar/search_bar_container';
+import SideBar from "./side_bar/side_bar";
+import MenuBar from "./nav_bar/menu_bar";
+
 
 
 export default () => (
@@ -16,18 +18,20 @@ export default () => (
       {/* <SideBarContainer /> */}
       {/* <NavBarContainer /> */}
       <Route exact path="/" component={NavBarContainer} />
-      <Route exact path="/" component={SideBarContainer} />
+      <Route exact path="/" component={SideBar} />
+      <Route exact path="/" component={MenuBar} />
     </header>
     <Switch>
       <AuthRoute path="/login" component={LoginContainer} />
       <AuthRoute exact path="/signup" component={SignupContainer} />
-      {/* <Route path="/sidebar" component={SideBarContainer} /> */}
       <Route exact path="/" component={VideoIndexContainer} />
       <Route exact path="/search" component={VideoIndexContainer} />
       <Route exact path="/videos/:videoId" component={VideoShowContainer} />
-      {/* <Route path="/result/:search" component={SearchBarContainer} /> */}
-      {/* <Route exact path="/videos" component={VideoIndexContainer} /> */}
-      <Route exact path="/comments/:commentId/edit" component={VideoIndexContainer}/>
+      <Route
+        exact
+        path="/comments/:commentId/edit"
+        component={VideoIndexContainer}
+      />
     </Switch>
   </div>
 );

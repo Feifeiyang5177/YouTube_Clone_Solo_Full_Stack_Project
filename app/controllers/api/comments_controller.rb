@@ -1,17 +1,19 @@
 class Api::CommentsController < ApplicationController
-    before_action :require_login, only: [:create, :destroy, :update]
+    #before_action :require_login, only: [:create, :destroy, :update]
+    before_action :require_logged_in, only: [:create, :destroy, :update]
     def create
-        @commenters = current_user.comments
+        @comments = current_user.comments
+        #@comments = Comment.all
         currentComment = false;
         @comments.each do |comment|
-           currentComment = true if comment.product_id == comment_params[:video_id].to_i
+           currentComment = true if comment.video_id == comment_params[:video_id].to_i
         end
         if !currentComment
             @comment = Comment.new(comment_params)
             @comment.save 
             render :show  
-        #else
-            #render json: ["You've already left a review for this video!"], status: 401
+        else
+            render json: ["You've already left a comment for this video!"], status: 401
         end
     end
 

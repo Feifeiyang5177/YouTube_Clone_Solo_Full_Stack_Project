@@ -22,7 +22,6 @@ class VideoShow extends React.Component {
         this.props.fetchVideo(this.props.match.params.videoId);
         this.props.addViews(this.props.currentVideoId);
         this.props.fetchVideos();
-        // this.updateViewCount = true;
     }
 
     render(){
@@ -31,7 +30,7 @@ class VideoShow extends React.Component {
         const videoIndex = (videos || []).map((vid, idx) => {
             if (video.id != vid.id){
             return (
-              //   <Link to={`videos/${video.id}`} key={idx}>
+             
               <div className="show-page-side-videos" key={idx}>
                 <video
                   className="show-page-index-video"

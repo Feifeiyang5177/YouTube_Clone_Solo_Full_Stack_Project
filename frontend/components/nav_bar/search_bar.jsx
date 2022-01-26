@@ -3,6 +3,8 @@ import { AiOutlineSearch} from "react-icons/ai";
 import {GrClose} from "react-icons/gr";
 import { Link } from "react-router-dom";
 
+
+
 // class SearchBar extends React.Component {
 //   constructor(props) {
 //     super(props);
@@ -149,7 +151,7 @@ function SearchBar (){
               <div className="search-button-and-close-icon">
                 <GrClose className="search-close-icon" onClick={clearInput} />
                 <Link className="search-button" to="/search">
-                  <AiOutlineSearch className="search-icon" />
+                  <AiOutlineSearch className="search-icon" /> 
                 </Link>
               </div>
             )}

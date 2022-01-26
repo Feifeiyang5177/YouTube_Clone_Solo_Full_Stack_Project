@@ -6,6 +6,7 @@ import { AiOutlineSearch, AiOutlineMenu} from "react-icons/ai";
 import {BiVideoPlus} from "react-icons/bi";
 import {CgProfile} from "react-icons/cg";
 import SearchBar from "./search_bar";
+import MenuBar from './menu_bar';
 
 export default ({ currentUser, logout, videos, fetchVideos }) => {
 const display = currentUser ? (
@@ -29,10 +30,16 @@ const update = (field) => {
     return e => this.setState({ [field]: e.currentTarget.value });
   }
 
+
+  // const MenuBar = <MenuBar />
+
   return (
     <div className="nav-bar">
       <div className="logo-and-menu-icon">
-        <AiOutlineMenu className="menu-icon" />
+        {/* <AiOutlineMenu className="menu-icon" onClick={<MenuBar />}/> */}
+        <div className="menu-icon">
+          <MenuBar />
+        </div>
         <h1 className="logo">
           <Link className="ya" to="/">
             Y a
@@ -60,7 +67,6 @@ const update = (field) => {
           </button>
         </form> */}
 
-       
       {/* </div> */}
 
       <div className="camera-icon-and-session-btn">

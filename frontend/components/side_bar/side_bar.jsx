@@ -5,14 +5,16 @@ import {RiHomeGearFill} from "react-icons/ri";
 import {FcLink} from "react-icons/fc";
 import {FiCoffee} from "react-icons/fi";
 import {FiLinkedin} from "react-icons/fi";
+// import MenuBar from "../nav_bar/menu_bar";
 
-export default (props) => {
+export default () => {
 
   return (
     <div className="sidebar-parent">
       <header className="side-bar">
+        {/* <MenuBar /> */}
         <div className="sidebar-content">
-          {/* <RiHomeGearFill className='sidebar-icon'/><Link to='/videos' className='sidebar-icon-words'> Home</Link> */}
+          {/* <RiHomeGearFilsl className='sidebar-icon'/><Link to='/videos' className='sidebar-icon-words'> Home</Link> */}
           <Link to="/">
             <RiHomeGearFill className="sidebar-icon" />
           </Link>
