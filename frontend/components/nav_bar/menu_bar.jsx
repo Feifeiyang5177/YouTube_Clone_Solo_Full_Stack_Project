@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
-import { RiHomeGearFill } from "react-icons/ri";
+import { MdDoubleArrow } from "react-icons/md";
 // import * as FcIcons from "react-icons/fc";
 import * as FaIcons from 'react-icons/fa'
 import * as AiIcons from "react-icons/ai";
@@ -19,14 +19,12 @@ function MenuBar() {
 
     return (
       <div className="m-side-nav-bar">
-        <IconContext.Provider value={{ color: "black", size: "25px" }}>
+        <IconContext.Provider value={{  size: "26px" }}>
           <div className="m-navbar">
             <div className="m-navbar-icon">
               <Link className="m-menu-bars">
                 <AiIcons.AiOutlineMenu
-                  className="m-menu-icon"
-                  onClick={showSidebar}
-                />
+                className="m-menu-icon" onClick={showSidebar} />
               </Link>
             </div>
           </div>
