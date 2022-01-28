@@ -1,2 +1,2 @@
-json.partial! "api/reviews/review", comment: @comment
+json.partial! "api/comments/comment", comment: @comment
 json.commenter @comment.commenter

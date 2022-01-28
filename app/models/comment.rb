@@ -1,5 +1,5 @@
 class Comment < ApplicationRecord
-validates :commenter_id, :video_id, presence: true
+validates :commenter_id, :video_id, :body, presence: true
 
   belongs_to :commenter,
   foreign_key: :commenter_id,

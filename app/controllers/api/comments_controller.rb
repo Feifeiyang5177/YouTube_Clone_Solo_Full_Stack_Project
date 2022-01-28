@@ -2,18 +2,18 @@ class Api::CommentsController < ApplicationController
     #before_action :require_login, only: [:create, :destroy, :update]
     before_action :require_logged_in, only: [:create, :destroy, :update]
     def create
-        @comments = current_user.comments
+        # @comments = current_user.comments
         #@comments = Comment.all
-        currentComment = false;
-        @comments.each do |comment|
-           currentComment = true if comment.video_id == comment_params[:video_id].to_i
-        end
-        if !currentComment
-            @comment = Comment.new(comment_params)
-            @comment.save 
+        # currentComment = false;
+        # @comments.each do |comment|
+        #    currentComment = true if comment.video_id == comment_params[:video_id].to_i
+        # end
+        # if !currentComment
+        @comment = Comment.new(comment_params)
+        if @comment.save 
             render :show  
         else
-            render json: ["You've already left a comment for this video!"], status: 401
+           render json: @comment.errors.full_messages, status: 401
         end
     end
 

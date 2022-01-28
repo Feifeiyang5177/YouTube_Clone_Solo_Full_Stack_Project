@@ -22,11 +22,14 @@ class VideoShow extends React.Component {
         this.props.fetchVideo(this.props.match.params.videoId);
         this.props.addViews(this.props.currentVideoId);
         this.props.fetchVideos();
+        this.props.fetchComments();
     }
 
     render(){
         
         const {video, videos, currentUser} = this.props;
+        if (!video ) return null;
+
         const videoIndex = (videos || []).map((vid, idx) => {
             if (video.id != vid.id){
             return (
@@ -63,6 +66,7 @@ class VideoShow extends React.Component {
         //   this.props.video(formData);
         // } 
       // const [count, setCount] = useState(0);
+
         return (
           <div className="video-show-page">
             <div className="video-container">
@@ -139,51 +143,43 @@ class VideoShow extends React.Component {
                 {/* </div> */}
 
                 <div className="v-d-s-2">
-                  <div className="comments-section"> 0 Comments</div>
-                  <div className="img-and-comment-input">
-                    <img
-                      className="comment-user-profile-img"
-                      src={window.userProfile2URL}
-                    />
-                    <CreateCommentForm
-                      className="input-box-and-buttons"
-                      video={video}
-                      currentUser={currentUser}
-                    />
+                  <div className="comment-content">
+                    <CommentIndex className="comment-content" />
                   </div>
                 </div>
-                <div className="comment-content">
-                  <CommentIndex className="comment-content" />
-                </div>
 
-                <div className="v-d-s-3">
-                  <img
+                {/* <div className="v-d-s-3"> */}
+                  {/* <img
                     className="user-profile-img"
                     src={window.userProfile2URL}
-                  />
+                  /> */}
 
-                  <div className="comment-container">
-                    <div className="creator">
+                  {/* <div className="comment-container"> */}
+                    {/* <div className="creator">
                       <div className="commenter-name">YaTube User</div>
-                    </div>
+                    </div> */}
 
-                    <div className="comment-content">
-                      <p>First Comment</p>
+                    {/* <div className="comment-content">
+                      <p>First Comment</p> */}
+                      {/* <div className="comment-content"> */}
+                        {/* <CommentIndex  /> */}
+                      {/* </div> */}
 
-                      <div className="comment-likes">
+                      {/* <div className="comment-likes">
                         <div className="inner-content">
                           <FiThumbsUp className="icon" />
                           <div className="likes-num"> </div>
                           <FiThumbsDown className="icon" />
                           <div className="likes-num"> </div>
                         </div>
-                      </div>
-                    </div>
-                  </div>
+                      </div> */}
+
+                    {/* </div> */}
+                  {/* </div> */}
                 </div>
 
                 {/* <div> <CommentIndexItem/></div> */}
-              </div>
+              {/* </div> */}
             </div>
 
             <div className="show-page-video-index">

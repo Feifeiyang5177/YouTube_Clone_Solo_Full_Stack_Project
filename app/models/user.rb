@@ -28,6 +28,11 @@ class User < ApplicationRecord
     has_many :videos,
     foreign_key: :creator_id,
     class_name: :Video
+
+    has_many :comments,
+    foreign_key: :commenter_id,
+    class_name: :Comment
+    
     
 
     def self.find_by_credentials(username, password)

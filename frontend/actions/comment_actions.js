@@ -53,11 +53,12 @@ export const thunkFetchComment = (commentId) => (dispatch) =>
     .apiReceiveComment(commentId)
     .then((comment) => dispatch(receiveComment(comment)));
 
-export const thunkCreateComment = (comment) => (dispatch) =>
-  commentAPIUtil.apiCreateComment(comment).then(
+export const thunkCreateComment = (comment) => (dispatch) => {
+  // debugger
+  return commentAPIUtil.apiCreateComment(comment).then(
     (comment) => dispatch(createComment(comment)),
     (errors) => dispatch(receiveCommentErrors(errors.responseJSON))
-  );
+  );};
 export const thunkUpdateComment = (comment) => (dispatch) =>
   commentAPIUtil.apiUpdateComment(comment).then(
     (comment) => dispatch(updateComment(comment)),

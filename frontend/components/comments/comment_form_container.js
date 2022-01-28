@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => ({
   comment: {
     body: "",
     video_id: ownProps.match.params.videoId,
-    commenter_id: state.session.id,
+    commenter_id: state.session?.currentUser?.id,
   },
   formType: "create",
   errors: state.errors.comments,

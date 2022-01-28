@@ -9,6 +9,7 @@ export default (state = [], action) => {
 
   switch (action.type) {
     case RECEIVE_COMMENT_ERRORS:
+      // debugger
       return action.errors;
 
     case CLEAR_COMMENT_ERRORS:

@@ -7,10 +7,11 @@ import {
 import CommentIndex from "./comment_index";
 import { withRouter } from "react-router";
 
+
 const mSTP = (state, ownProps) => ({
   comments: Object.values(state.entities.comments),
   video: state.entities.videos[ownProps.match.params.videoId],
-  currentUserId: state.session.currentUser,
+  currentUser: state.session.currentUser,
   //   currentUser: state.entities.users[state.session.id],
 }); 
 

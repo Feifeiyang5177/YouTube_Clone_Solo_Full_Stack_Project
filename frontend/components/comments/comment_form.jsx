@@ -84,7 +84,7 @@ class CreateCommentForm extends React.Component {
             placeholder="Add a public comment..."
           ></input>
         </div>
-        <div className="comment-imput-buttons">
+        <div className="comment-input-buttons">
           <button className="actual-button-comment" type="submit">
             {submitButton}
           </button>
