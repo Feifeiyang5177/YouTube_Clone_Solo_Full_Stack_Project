@@ -22,9 +22,9 @@ class CreateCommentForm extends React.Component {
   }
   renderErrors() {
     return (
-      <ul >
+      <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li className="comment-error-messages" key={i}>
             {error}
           </li>
         ))}
@@ -67,15 +67,7 @@ class CreateCommentForm extends React.Component {
 
     return (
       <form className="input-box-and-buttons" onSubmit={submit}>
-        {/* {errors?.length ? this.renderErrors() : null} */}
         <div className="input-box-and-buttons">
-          {/* <textarea
-            // className="textare-field"
-            // cols="50"
-            // rows="5"
-            value={this.state.content}
-            onChange={this.updateContent}
-          ></textarea> */}
           <input
             className="comments-input"
             value={this.state.body}
@@ -84,7 +76,9 @@ class CreateCommentForm extends React.Component {
             placeholder="Add a public comment..."
           ></input>
         </div>
+
         <div className="comment-input-buttons">
+          {errors?.length ? this.renderErrors() : null}
           <button className="actual-button-comment" type="submit">
             {submitButton}
           </button>

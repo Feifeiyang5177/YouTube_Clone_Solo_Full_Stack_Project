@@ -18,16 +18,7 @@ class Login extends React.Component {
   componentDidMount() {
     this.props.clearErrors();
   }
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   // if (nextProps.errors.length === 0) {
-  //   //   this.props.history.push("/");
-  //   // }
-  //   // return true;
-  //   if (nextProps.errors.length === 0) {
-  //     return true;
-  //   }
-    
-  // }
+
   handleInput(type) {
     return (e) => {
       this.setState({ [type]: e.target.value });
@@ -60,17 +51,6 @@ class Login extends React.Component {
       </div>
     );
   }
-  // renderErrors() {
-  //   return (
-  //     <ul>
-  //       {Object.keys(this.state.errors).map((error, i) => (
-  //         <li className="signin-errors" style={{ marginBottom: 10 }} key={`error-${i}`}>
-  //           {this.state.errors[error]}
-  //         </li>
-  //       ))}
-  //     </ul>
-  //   );
-  // }
   render() {
     return (
       <div className="session-form">

@@ -49,7 +49,7 @@ class VideoShow extends React.Component {
                   <div className="event-text">{vid.view_count} views</div>
                 </div>
               </div>
-              //   </Link>
+              
             );
             }else {
               return (
@@ -57,15 +57,7 @@ class VideoShow extends React.Component {
               )
             }
         });
-        // if (this.updateViewCount) {
-        //   video.view_count += 1;
-        //   const formData = new FormData();
-        //   formData.append("video[view_count]", video.view_count);
-        //   formData.append("video[id]", video.id);
-        //   this.updateViewCount = false;
-        //   this.props.video(formData);
-        // } 
-      // const [count, setCount] = useState(0);
+    
 
         return (
           <div className="video-show-page">
