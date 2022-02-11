@@ -48,6 +48,7 @@ class CreateCommentForm extends React.Component {
     e.preventDefault();
     this.setState({ body: e.target.value });
   }
+  
   handleUpdate(e) {
     e.preventDefault();
     this.props

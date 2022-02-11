@@ -28,6 +28,7 @@ class CommentIndex extends React.Component {
       return comment.video_id === video?.id;
     });
     let totalComments = videoComments.length;
+    debugger
 
     const renderComments = videoComments.length ? (
       (videoComments || []).map((comment, i) => {

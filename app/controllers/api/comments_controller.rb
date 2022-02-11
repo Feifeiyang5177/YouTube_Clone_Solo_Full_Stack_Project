@@ -11,8 +11,10 @@ class Api::CommentsController < ApplicationController
         # if !currentComment
         @comment = Comment.new(comment_params)
         if @comment.save 
+            # debugger
             render :show  
         else
+            # debugger
            #render json: @comment.errors.full_messages, status: 401
            render json: ["Invalid comment!"], status: 401
         end
@@ -24,7 +26,7 @@ class Api::CommentsController < ApplicationController
     end
 
     def index
-        @comments = Comments.all
+        @comments = Comment.all
         render :index
 
     end

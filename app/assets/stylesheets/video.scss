@@ -90,12 +90,16 @@
 
 
             .group-video-title{
-                font-size: 20px;
+                font-size: 18px;
                 font-family: 'Roboto', sans-serif;
                 color: rgb(23, 23, 23); 
                 margin-bottom: 10px;
                 background-color: transparent;
-                width: 250px;
+               margin-top: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                width: 25vw;
+            max-width: 25vw;
             }
 
             .group-video-creator{

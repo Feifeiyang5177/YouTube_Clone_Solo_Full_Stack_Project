@@ -1,7 +1,10 @@
 class Api::VideosController < ApplicationController
 
     def index 
-        @videos = Video.all 
+        # @videos = Video.all 
+
+        # pre-fetching association
+        @videos = Video.includes(:creator).all
         render :index 
     end 
 

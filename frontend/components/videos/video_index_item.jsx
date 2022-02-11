@@ -42,7 +42,7 @@ class VideoIndexItem extends React.Component {
           </Link>
           <div className="group-video-title-container">
             <div className="group-video-title">{video.title}</div>
-            <div className="group-video-creator">{currentUser}Feifei</div>
+            <div className="group-video-creator">Feifei</div>
             <div className="group-video-creator">
               {/* {video.view_count} views • {video.updated_at} days ago */}
               {video.view_count} views • {video.createdAt} days ago

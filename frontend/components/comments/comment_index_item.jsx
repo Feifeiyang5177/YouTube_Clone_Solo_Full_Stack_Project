@@ -44,7 +44,9 @@ class CommentIndexItem extends React.Component {
               </div>
             </div>
 
-            {currentUser.id === comment?.commenter_id ? (
+{/* if currentUser, check the id, if not, ignor it.  */}
+
+            {currentUser?.id === comment?.commenter_id ? (
               <div className="edit-delete-buttons">
                 {/* <Link to={`/comments/${comment.id}/edit`} className="edit-review"> */}
                 <button className="comment-btn">Edit</button>
