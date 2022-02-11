@@ -27,16 +27,8 @@ export const logOut = () => (
     })
 );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+export const apiFetchAllUsers = () => {
+  return $.ajax({
+       url: "/api/users",
+  })
+};

@@ -53,6 +53,14 @@ export const logOut = () => dispatch => {
     .then(() => dispatch(logoutUser()))
 };
 
+export const thunkFetchAllUsers = () => (dispatch) => {
+    debugger
+  return SessionUtil
+  .apiFetchAllUsers().then((users) =>
+    dispatch(receiveAllUsers(users))
+  );
+};
+
 
 
 

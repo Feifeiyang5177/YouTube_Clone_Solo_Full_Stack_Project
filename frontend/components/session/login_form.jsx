@@ -9,7 +9,7 @@ class Login extends React.Component {
     this.state = {
       username: "",
       password: "",
-      isSubmited: false,
+      // isSubmited: false,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,12 +20,12 @@ class Login extends React.Component {
     this.props.clearErrors();
   }
 
- shouldComponentUpdate(nextProps, nextState){
-    if(nextProps.errors.length === 0 && this.state.isSubmited === true) {
-      this.props.login(this.state);
-    }
-    return true;
-  }
+//  shouldComponentUpdate(nextProps, nextState){
+//     if(nextProps.errors.length === 0 && this.state.isSubmited === true) {
+//       this.props.login(this.state);
+//     }
+//     return true;
+//   }
 
   handleInput(type) {
     return (e) => {
@@ -35,13 +35,14 @@ class Login extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.setState({ isSubmited: true });
+    // this.setState({ isSubmited: true });
     this.props.login(this.state).then(() => this.props.history.push("/"));
   }
+
   loginDemo() {
     this.props
       .login({
-        username: "Demo5",
+        username: "DemoUser",
         email: "user5@gmail.com",
         password: "555555",
       })

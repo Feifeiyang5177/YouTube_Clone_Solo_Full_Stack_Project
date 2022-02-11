@@ -22,3 +22,5 @@ export const addViews = (videoId) => {
     url: `/api/videos/${videoId}/add_views`,
   });
 };
+
+

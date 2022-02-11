@@ -13,7 +13,8 @@ class Api::CommentsController < ApplicationController
         if @comment.save 
             render :show  
         else
-           render json: @comment.errors.full_messages, status: 401
+           #render json: @comment.errors.full_messages, status: 401
+           render json: ["Invalid comment!"], status: 401
         end
     end
 
