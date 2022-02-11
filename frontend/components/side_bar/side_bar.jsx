@@ -32,10 +32,10 @@ export default () => {
           <div className="sidebar-icon-words">LinkedIn</div>
         </div>
         <div className="sidebar-content">
-          <a href="https://github.com/Feifeiyang5177" target="_blank">
+          <a href="https://feifeiyang-swe.com/" target="_blank">
             <FaGithubAlt className="sidebar-icon" />
           </a>
-          <div className="sidebar-icon-words">GitHub</div>
+          <div className="sidebar-icon-words">Web</div>
         </div>
 
         <div className="sidebar-content">
