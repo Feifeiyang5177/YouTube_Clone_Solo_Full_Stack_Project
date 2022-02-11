@@ -8,7 +8,8 @@ class Login extends React.Component {
     super(props);
     this.state = {
       username: "",
-      password: ""
+      password: "",
+      isSubmited: false,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,6 +20,13 @@ class Login extends React.Component {
     this.props.clearErrors();
   }
 
+ shouldComponentUpdate(nextProps, nextState){
+    if(nextProps.errors.length === 0 && this.state.isSubmited === true) {
+      this.props.login(this.state);
+    }
+    return true;
+  }
+
   handleInput(type) {
     return (e) => {
       this.setState({ [type]: e.target.value });
@@ -27,6 +35,7 @@ class Login extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.setState({ isSubmited: true });
     this.props.login(this.state).then(() => this.props.history.push("/"));
   }
   loginDemo() {

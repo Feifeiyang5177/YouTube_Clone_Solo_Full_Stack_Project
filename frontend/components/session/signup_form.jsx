@@ -28,6 +28,7 @@ class Signup extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    
     this.props
       .signUp(this.state)
       .then(() => this.props.history.push("/"));
@@ -56,20 +57,6 @@ class Signup extends React.Component {
       </div>
     );
   }
-
-  // renderNameErrors(){
-  //   return (
-  //     <div className="signup-errors">
-  //       <div className="signup-error">
-  //         <div className="error-icon">
-  //           <MdError />
-  //         </div>
-  //         <div className="error-messages">{this.props.errors[0]}</div>
-  //       </div>
-  //     </div>
-  //   );
-
-  // }
 
 
   render() {
