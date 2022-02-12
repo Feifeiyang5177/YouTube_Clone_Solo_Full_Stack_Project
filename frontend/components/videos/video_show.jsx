@@ -42,9 +42,8 @@ class VideoShow extends React.Component {
                 ></video>
                 <div className="s-p-s-v-description-container">
                   <div className="event-text-t">{vid.title}</div>
-                  {/* <div className="event-text">{vid.description}</div> */}
                   <div className="event-text">
-                    Created by user {vid.creator_id}
+                    {vid.creator.username}
                   </div>
                   <div className="event-text">{vid.view_count} views</div>
                 </div>
@@ -118,7 +117,7 @@ class VideoShow extends React.Component {
                     <div className="description-container">
                       <div className="creator">
                         <div className="creator-name">
-                          YaTube User {video.creator_id.username}
+                          {video.creator.username}
                         </div>
                       </div>
                       <div className="red-button">
