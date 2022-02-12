@@ -5,8 +5,6 @@ import {FiThumbsUp, FiThumbsDown, FiMoreHorizontal} from "react-icons/fi";
 import {RiShareForwardLine} from "react-icons/ri";
 import CreateCommentForm from "../comments/comment_form_container";
 import CommentIndex from "../comments/comment_index_container";
-// import VideoIndexItem from "./video_index_item";
-// import VideoIndex from "./video_index";
 
 
 class VideoShow extends React.Component {
@@ -19,8 +17,6 @@ class VideoShow extends React.Component {
     }
 
     componentDidMount(){  
-        this.props.fetchVideo(this.props.match.params.videoId);
-        this.props.addViews(this.props.currentVideoId);
         this.props.fetchVideos();
         this.props.fetchComments();
     }
@@ -32,8 +28,9 @@ class VideoShow extends React.Component {
 
         const videoIndex = (videos || []).map((vid, idx) => {
             if (video.id != vid.id){
+              debugger
             return (
-             
+              
               <div className="show-page-side-videos" key={idx}>
                 <video
                   className="show-page-index-video"
@@ -45,14 +42,14 @@ class VideoShow extends React.Component {
                   <div className="event-text">
                     {vid.creator.username}
                   </div>
-                  <div className="event-text">{vid.view_count} views</div>
+                  <div className="event-text">views</div>
                 </div>
               </div>
               
             );
             }else {
               return (
-                <div></div>
+                null
               )
             }
         });
@@ -138,39 +135,8 @@ class VideoShow extends React.Component {
                     <CommentIndex className="comment-content" />
                   </div>
                 </div>
-
-                {/* <div className="v-d-s-3"> */}
-                  {/* <img
-                    className="user-profile-img"
-                    src={window.userProfile2URL}
-                  /> */}
-
-                  {/* <div className="comment-container"> */}
-                    {/* <div className="creator">
-                      <div className="commenter-name">YaTube User</div>
-                    </div> */}
-
-                    {/* <div className="comment-content">
-                      <p>First Comment</p> */}
-                      {/* <div className="comment-content"> */}
-                        {/* <CommentIndex  /> */}
-                      {/* </div> */}
-
-                      {/* <div className="comment-likes">
-                        <div className="inner-content">
-                          <FiThumbsUp className="icon" />
-                          <div className="likes-num"> </div>
-                          <FiThumbsDown className="icon" />
-                          <div className="likes-num"> </div>
-                        </div>
-                      </div> */}
-
-                    {/* </div> */}
-                  {/* </div> */}
                 </div>
-
-                {/* <div> <CommentIndexItem/></div> */}
-              {/* </div> */}
+    
             </div>
 
             <div className="show-page-video-index">

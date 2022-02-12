@@ -22,7 +22,7 @@ function MenuBar() {
         <IconContext.Provider value={{  size: "26px" }}>
           <div className="m-navbar">
             <div className="m-navbar-icon">
-              <Link className="m-menu-bars">
+              <Link className="m-menu-bars" to="">
                 <AiIcons.AiOutlineMenu
                 className="m-menu-icon" onClick={showSidebar} />
               </Link>

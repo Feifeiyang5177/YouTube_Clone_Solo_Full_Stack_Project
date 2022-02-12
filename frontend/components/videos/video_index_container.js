@@ -7,7 +7,6 @@ import { thunkFetchAllUsers } from "../../actions/user_actions";
 const mSTP = (state) => {
   return {
     videos: Object.values(state.entities.videos),
-    // currentUserId: state.session.id
     currentUser: state.session.currentUser,
     users: state.entities.users
   };

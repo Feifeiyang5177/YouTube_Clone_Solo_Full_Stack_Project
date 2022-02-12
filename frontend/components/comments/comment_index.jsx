@@ -53,7 +53,7 @@ class CommentIndex extends React.Component {
     return (
       <div className="comments-container">
         <div className="total-comments">
-          <h1 lassName="comments-section">{totalComments} comments</h1>
+          <h1 className="comments-section">{totalComments} comments</h1>
 
           <div className="comments-section"></div>
           <div className="img-and-comment-input">
