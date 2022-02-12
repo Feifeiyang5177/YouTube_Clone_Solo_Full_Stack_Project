@@ -19,7 +19,7 @@ user1 = User.create!(username: 'Feifei Yang 杨飞飞', email: 'feifei1@gmail.co
 user2 = User.create!(username: 'Andy S 吴世豪', email: 'user2@gmail.com', password: '222222')
 user3 = User.create!(username: 'Hien N', email: 'user3@gmail.com', password: '333333')
 user4 = User.create!(username: 'Emily', email: 'user4@gmail.com', password: '444444')
-demo5 = User.create!(username: 'DemoUser 演释者', email: 'user5@gmail.com', password: '555555')
+demo5 = User.create!(username: 'DemoUser 演示者', email: 'user5@gmail.com', password: '555555')
 
 video1 = Video.create!(title: 'Introduction', creator_id: user2.id, description: "This is my first video!", view_count: 198)
 intro1 = URI.open("https://yatube-seeds.s3.amazonaws.com/demo1.MOV")
