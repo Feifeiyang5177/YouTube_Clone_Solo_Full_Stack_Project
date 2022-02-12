@@ -20,7 +20,7 @@ class VideoIndexItem extends React.Component {
     const { video, currentUser } = this.props;
 
     const timeNow = new Date();
-    const oldTime = new Date(video.createdAt);
+    const oldTime = new Date(video.created_at);
     const time = timeNow - oldTime;
     const timeDays = Math.round(time / (1000 * 3600 * 24));
     const timeAgo =
@@ -45,7 +45,7 @@ class VideoIndexItem extends React.Component {
             <div className="group-video-creator">{video.creator.username}</div>
             <div className="group-video-creator">
               {/* {video.view_count} views • {video.updated_at} days ago */}
-              {video.view_count} views • {video.createdAt} days ago
+              {video.view_count} views • {timeAgo}
             </div>
           </div>
         </div>

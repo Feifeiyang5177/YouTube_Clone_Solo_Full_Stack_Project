@@ -23,7 +23,9 @@ class VideoShow extends React.Component {
 
     render(){
         
-        const {video, videos, currentUser} = this.props;
+        const {video, videos} = this.props;
+        // const createdAt = new Date(video.created_at);
+        // const timeDays = Math.round(time / (1000 * 3600 * 24));
         if (!video ) return null;
 
         const videoIndex = (videos || []).map((vid, idx) => {
@@ -42,7 +44,7 @@ class VideoShow extends React.Component {
                   <div className="event-text">
                     {vid.creator.username}
                   </div>
-                  <div className="event-text">views</div>
+                  <div className="event-text"> {vid.view_count} views</div>
                 </div>
               </div>
               
@@ -66,7 +68,7 @@ class VideoShow extends React.Component {
                 </div>
                 <div className="video-view-count-container">
                   <div className="video-view-count">
-                    {video.view_count} views • {video.updatedAt}
+                    {video.view_count} views • 
                   </div>
 
                   <div className="video-likes-icons">
