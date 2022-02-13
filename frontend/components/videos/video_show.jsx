@@ -1,10 +1,12 @@
 
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import {FiThumbsUp, FiThumbsDown, FiMoreHorizontal} from "react-icons/fi";
 import {RiShareForwardLine} from "react-icons/ri";
-import CreateCommentForm from "../comments/comment_form_container";
 import CommentIndex from "../comments/comment_index_container";
+import NavBar from "../nav_bar/nav_bar_container";
+import { Link } from "react-router-dom";
+// import SideBar from "../side_bar/side_bar";
+
 
 
 class VideoShow extends React.Component {
@@ -18,36 +20,41 @@ class VideoShow extends React.Component {
 
     componentDidMount(){  
         this.props.fetchVideos();
-        this.props.fetchComments();
+        this.props.fetchVideo(this.props.match.params.videoId);
     }
 
     render(){
         
         const {video, videos} = this.props;
-        // const createdAt = new Date(video.created_at);
-        // const timeDays = Math.round(time / (1000 * 3600 * 24));
+
+         const timeNow = new Date();
+         const oldTime = new Date(video.created_at);
+         const time = timeNow - oldTime;
+         const timeDays = Math.round(time / (1000 * 3600 * 24));
+         const timeAgo =
+           timeDays < 1 ? "less than 1 day ago" : timeDays === 1 ? "1 day ago" : `${timeDays} days ago`;
+
         if (!video ) return null;
 
         const videoIndex = (videos || []).map((vid, idx) => {
             if (video.id != vid.id){
-              debugger
+              // debugger
             return (
-              
               <div className="show-page-side-videos" key={idx}>
+                {/* <Link to={`videos/${video.id}`}> */}
                 <video
                   className="show-page-index-video"
                   src={vid.vdUrl}
                   controls
                 ></video>
+                {/* </Link> */}
                 <div className="s-p-s-v-description-container">
                   <div className="event-text-t">{vid.title}</div>
-                  <div className="event-text">
-                    {vid.creator.username}
-                  </div>
+                  <div className="event-text">{vid.creator.username}</div>
                   <div className="event-text"> {vid.view_count} views</div>
+                  <div className="event-text"> {timeAgo}</div>
                 </div>
               </div>
-              
             );
             }else {
               return (
@@ -59,6 +66,10 @@ class VideoShow extends React.Component {
 
         return (
           <div className="video-show-page">
+            <div>
+              <NavBar />
+            </div>
+
             <div className="video-container">
               <video className="singleVideo" src={video.vdUrl} controls></video>
 
@@ -68,7 +79,13 @@ class VideoShow extends React.Component {
                 </div>
                 <div className="video-view-count-container">
                   <div className="video-view-count">
-                    {video.view_count} views • 
+                    {video.view_count} views •{" "}
+                    {new Intl.DateTimeFormat("en-US", {
+                      year: "numeric",
+                      month: "short",
+                      day: "2-digit",
+                    }).format(oldTime)}
+                    
                   </div>
 
                   <div className="video-likes-icons">
@@ -137,14 +154,14 @@ class VideoShow extends React.Component {
                     <CommentIndex className="comment-content" />
                   </div>
                 </div>
-                </div>
-    
+              </div>
             </div>
 
             <div className="show-page-video-index">
               <div className="show-page-video-lines">{videoIndex}</div>
             </div>
           </div>
+         
         );
     }
 }

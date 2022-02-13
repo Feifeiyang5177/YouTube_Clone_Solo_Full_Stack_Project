@@ -1,5 +1,5 @@
 import {connect} from "react-redux";
-import { addViews, fetchVideos } from "../../actions/videos_action";
+import { addViews, fetchVideos, fetchVideo} from "../../actions/videos_action";
 import VideoShow from "./video_show";
 import {
   thunkFetchComments,
@@ -17,6 +17,7 @@ const mSTP = (state, ownProps) => ({
 const mDTP = (dispatch) => ({
   // addViews: (videoId) => dispatch(addViews(videoId)),
   fetchVideos: () => dispatch(fetchVideos()),
+  fetchVideo: (videoId) => dispatch(fetchVideo(videoId)),
   fetchComments: () => dispatch(thunkFetchComments()),
 });
 

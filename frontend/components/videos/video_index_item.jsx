@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 
@@ -44,7 +44,6 @@ class VideoIndexItem extends React.Component {
             <div className="group-video-title">{video.title}</div>
             <div className="group-video-creator">{video.creator.username}</div>
             <div className="group-video-creator">
-              {/* {video.view_count} views • {video.updated_at} days ago */}
               {video.view_count} views • {timeAgo}
             </div>
           </div>
@@ -55,64 +54,3 @@ class VideoIndexItem extends React.Component {
 }
 
 export default VideoIndexItem
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//     return (
-//         <li className="videoItemContainer">
-//             <Link to={`/watch/${video.id}`}>
-//                 <div className="thumbnail-wrapper"> 
-//                     <img className="thumbnail" src={video.thumbnail} />
-//                 </div>
-
-//                 <div>
-//                     <p className="video-title">{video.title}</p>
-//                         <section className="video-details">
-//                             <span>{video.creator}</span>
-//                             <p>{video.view_count} views <span>&#5867;</span> {video.doc}</p>
-//                         </section>
-//                 </div>
-//             </Link>
-//         </li>
-
-//     )
-
-// }
-
-// export default VideoIndexItem

@@ -29,7 +29,7 @@ export const fetchVideo = (videoId) => dispatch => {
     return (
         VideoUtil.fetchVideo(videoId).then((video) => dispatch(receiveVideo(video)))
     )
-}
+} 
 
 export const addViews = (videoId) => (dispatch) =>
   VideoUtil.addViews(videoId).then(dispatch(addVideoViews(videoId)));

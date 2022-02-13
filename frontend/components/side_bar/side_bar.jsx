@@ -5,7 +5,6 @@ import {RiHomeGearFill} from "react-icons/ri";
 import {FcLink} from "react-icons/fc";
 import {FiCoffee} from "react-icons/fi";
 import {FiLinkedin} from "react-icons/fi";
-// import MenuBar from "../nav_bar/menu_bar";
 
 export default () => {
 

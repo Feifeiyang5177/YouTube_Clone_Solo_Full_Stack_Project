@@ -162,7 +162,7 @@ function SearchBar (){
           <div>
             {state.map((v, k) => {
               return (
-                <div className="search-result">
+                <div className="search-result" key={k}>
                   <p className="search-result-names">{v}</p>
                 </div>
               );

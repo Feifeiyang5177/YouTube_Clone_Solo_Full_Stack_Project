@@ -8,18 +8,15 @@ import {AuthRoute, ProtectedRoute} from '../util/route_utils';
 import VideoShowContainer from './videos/video_show_container';
 // import SearchBarContainer from './nav_bar/search_bar_container';
 import SideBar from "./side_bar/side_bar";
-import MenuBar from "./nav_bar/menu_bar";
+
 
 
 
 export default () => (
   <div>
     <header>
-      {/* <SideBarContainer /> */}
-      {/* <NavBarContainer /> */}
       <Route exact path="/" component={NavBarContainer} />
-      <Route exact path="/" component={SideBar} />
-      <Route exact path="/" component={MenuBar} />
+      <Route exact path="/" component={SideBar} /> 
     </header>
     <Switch>
       <AuthRoute path="/login" component={LoginContainer} />
