@@ -1,7 +1,5 @@
 import React from "react";
 import { FiThumbsUp, FiThumbsDown, FiMoreHorizontal } from "react-icons/fi";
-// import { AiTwotoneStar, AiOutlineStar } from "react-icons/ai";
-// import { Link } from "react-router-dom";
 class CommentIndexItem extends React.Component {
   constructor(props) {
     super(props);
@@ -45,7 +43,6 @@ class CommentIndexItem extends React.Component {
             </div>
 
 {/* if currentUser, check the id, if not, ignor it.  */}
-
             {currentUser?.id === comment?.commenter_id ? (
               <div className="edit-delete-buttons">
                 {/* <Link to={`/comments/${comment.id}/edit`} className="edit-review"> */}

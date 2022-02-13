@@ -1,8 +1,5 @@
 import React from "react";
 import CommentIndexItem from "./comment_index_item";
-// import { AiTwotoneStar, AiOutlineStar } from "react-icons/ai";
-// import { MdStars } from "react-icons/md";
-// import StarRatings from "react-star-ratings";
 import CreateCommentForm from "./comment_form_container";
 
 class CommentIndex extends React.Component {
@@ -18,8 +15,7 @@ class CommentIndex extends React.Component {
     const {
       comments,
       video,
-      updateComment,
-      
+      updateComment,  
       deleteComment,
       errors,
       currentUser,

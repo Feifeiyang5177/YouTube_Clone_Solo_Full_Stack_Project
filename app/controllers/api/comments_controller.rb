@@ -1,21 +1,12 @@
 class Api::CommentsController < ApplicationController
-    #before_action :require_login, only: [:create, :destroy, :update]
     before_action :require_logged_in, only: [:create, :destroy, :update]
     def create
-        # @comments = current_user.comments
-        #@comments = Comment.all
-        # currentComment = false;
-        # @comments.each do |comment|
-        #    currentComment = true if comment.video_id == comment_params[:video_id].to_i
-        # end
-        # if !currentComment
         @comment = Comment.new(comment_params)
         if @comment.save 
             # debugger
             render :show  
         else
             # debugger
-           #render json: @comment.errors.full_messages, status: 401
            render json: ["Invalid comment!"], status: 401
         end
     end

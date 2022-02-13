@@ -1,15 +1,9 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
-import { MdDoubleArrow } from "react-icons/md";
-// import * as FcIcons from "react-icons/fc";
-import * as FaIcons from 'react-icons/fa'
 import * as AiIcons from "react-icons/ai";
 import * as FcIcons from  "react-icons/fc";
-import {GrInternetExplorer} from 'react-icons/gr';
-// VscRemoteExplorer;
-import {MenuBarData} from './menu_bar_data';
 import {IconContext} from 'react-icons'
-import * as RiIcons from "react-icons/ri";
+
 
 
 function MenuBar() {
