@@ -24,8 +24,9 @@ class VideoShow extends React.Component {
     }
 
     render(){
-        
+        debugger 
         const {video, videos} = this.props;
+        if (!video) return null;
 
          const timeNow = new Date();
          const oldTime = new Date(video.created_at);
