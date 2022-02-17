@@ -24,7 +24,7 @@ class VideoShow extends React.Component {
     }
 
     render(){
-        debugger 
+        // debugger 
         const {video, videos} = this.props;
         if (!video) return null;
 
