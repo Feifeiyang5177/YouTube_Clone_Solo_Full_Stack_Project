@@ -339,15 +339,18 @@
                     flex-direction: column;
                     margin-top: 5%;
                     width: 50vw;
-                    float: right;
+                    // float: right;
                 }
                 .comments-input{
                     // background-color: darkmagenta;
-                    border-top: none;
-                    border-left: none;
-                    border-right: none;
+                    border-top: hidden;
+                    border-left: hidden;
+                    border-right: hidden;
                     border-bottom: 0.5px solid black;
                     // float: right;
+                    outline: none;
+                    height: 30px;
+                    font-size: 15px;
                     
                 }
                 .comment-input-buttons{
@@ -391,7 +394,7 @@
                     border: none;
                 }
 
-
+ 
         .v-d-s-3{
             display: flex;
             flex-direction: row;
@@ -399,24 +402,54 @@
             margin-bottom: 50px;
         }
 
+         .commenter-profile-img{
+                // margin-top: 40px;
+                width: 6vw;
+                height: 10vh;
+                margin-right: 5px;
+            }
+
         .comment-container{
             height: 15vh;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            align-items: center;
+            align-items:flex-start;
             // margin-top: 5%;
             
         }
         .commenter-name{
-            font-size: 15px;
+            margin-top: 10px;
+            font-size: 14px;
             font-family: 'Roboto', sans-serif;
+            margin-bottom: 10px;
         }
+
+        // .comment-content {
+        //     margin-bottom: 100px;
+        // }
         .comment-likes{
             font-size: 20px;
+            display: flex;
+            align-items: flex-start;
+           justify-content: space-between;
+           width: 50vw;
+           margin-top: 20px;
 
         }
 
+        .comment-likes-button{
+            text-decoration: none;
+            border: none;
+            background-color: transparent;
+                        }
+
+        .comment-btn{
+            text-decoration: none;
+            border: none;
+            background-color: transparent;
+
+        }
 
 // -------------------- show page index videos ---------------
  .show-page-video-index{

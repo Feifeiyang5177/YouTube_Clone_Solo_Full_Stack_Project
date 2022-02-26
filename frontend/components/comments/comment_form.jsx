@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import StarRatings from "react-star-ratings";
+
 
 class CreateCommentForm extends React.Component {
   constructor(props) {
@@ -8,12 +8,12 @@ class CreateCommentForm extends React.Component {
     this.state = this.props.comment;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleUpdate = this.handleUpdate.bind(this);
-    // this.changeRating = this.changeRating.bind(this);
     this.updateContent = this.updateContent.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
   }
   componentDidMount() {
-    if (this.props.formType === "edit") {
+    this.props.clearErrors();
+    if (this.props.formType === "update") {
       this.props.fetchComment(this.props.match.params.commentId);
     }
     if (this.props.errors?.length) {
@@ -34,7 +34,7 @@ class CreateCommentForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const { currentUser, comments, video } = this.props;
+    const { currentUser} = this.props;
 
     if (currentUser) {
       this.props.createComment(this.state);
@@ -53,7 +53,7 @@ class CreateCommentForm extends React.Component {
     e.preventDefault();
     this.props
       .updateComment(this.state)
-      .then(() => this.props.history.push("/"));
+      .then(() => this.props.history.push(`/videos/${this.props.comment.video_id}`));
   }
 
   render() {
@@ -73,13 +73,14 @@ class CreateCommentForm extends React.Component {
             className="comments-input"
             value={this.state.body}
             onChange={this.updateContent}
-            type="text"
+            type="update"
             placeholder="Add a public comment..."
           ></input>
         </div>
 
         <div className="comment-input-buttons">
-          {errors?.length ? this.renderErrors() : null}
+          {/* {errors?.length ? this.renderErrors() : null} */}
+          {this.renderErrors()}
           <button className="actual-button-comment" type="submit">
             {submitButton}
           </button>

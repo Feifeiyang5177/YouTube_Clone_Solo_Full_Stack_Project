@@ -46,7 +46,7 @@ export const thunkFetchComments = () => (dispatch) => {
   return commentAPIUtil
     .apiReceiveAllComments()
     .then((comments) => dispatch(receiveComments(comments)));
-};
+}; 
 
 export const thunkFetchComment = (commentId) => (dispatch) =>
   commentAPIUtil
