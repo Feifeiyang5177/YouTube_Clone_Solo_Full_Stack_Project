@@ -35,7 +35,7 @@ class CommentIndexItem extends React.Component {
 
           <div className="comment-content">
             {/* <div className="commemnt-body"> */}
-            <p>{comment.body}</p>
+            <p className="comment-body">{comment.body}</p>
             {/* </div> */}
 
             <div className="comment-likes">
