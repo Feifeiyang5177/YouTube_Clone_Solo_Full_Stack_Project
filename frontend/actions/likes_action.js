@@ -27,7 +27,13 @@ export const createLike = (like) => dispatch => {
 
 
 export const deleteLike = (likeId) => (dispatch) => {
-  return LikesUtil.deleteLike(likeId).then((like) => {
-    dispatch(removeVideoLike(like));
+  return LikesUtil.deleteLike(likeId).then(() => {
+    dispatch(removeVideoLike(likeId));
   });
 };
+
+// export const deleteLike = (likeId) => (dispatch) => {
+//   return LikesUtil.deleteLike(likeId).then((like) => {
+//     dispatch(removeVideoLike(like));
+//   });
+// };

@@ -1,11 +1,12 @@
 import { connect } from "react-redux";
 import { createLike, deleteLike } from "../../actions/likes_action";
-import Likes from "./likes";
+import LikesCount from "./likes";
 
-const mSTP = ({ session, entities: { users } }) => {
+const mSTP = (state) => {
   return {
     currentUserId: session.id,
-    currentUser: users[session.id],
+    currentUser: state.session.currentUser,
+    likes: 0,
   };
 };
 
@@ -16,4 +17,8 @@ const mDTP = (dispatch) => {
   };
 };
 
-export default connect(mSTP, mDTP)(Likes);
+export default connect(mSTP, mDTP)(LikesCount);
+
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(CreateCommentForm)
+);

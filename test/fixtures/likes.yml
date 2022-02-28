@@ -3,6 +3,7 @@
 # Table name: likes
 #
 #  id         :bigint           not null, primary key
+#  like_num   :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  comment_id :integer          not null
