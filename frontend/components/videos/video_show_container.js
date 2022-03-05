@@ -6,7 +6,7 @@ import {
 } from "../../actions/comment_actions";
 
 
-
+ 
 const mSTP = (state, ownProps) => ({
   video: state.entities.videos[ownProps.match.params.videoId],
   videos: Object.values(state.entities.videos),

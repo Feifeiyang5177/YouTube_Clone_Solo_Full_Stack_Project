@@ -8,14 +8,13 @@ const mSTP = (state) => {
   return {
     videos: Object.values(state.entities.videos),
     currentUser: state.session.currentUser,
-    // users: state.entities.users
+    
   };
   
 };
 
 const mDTP = (dispatch) => ({
   fetchVideos: () => dispatch(fetchVideos()),
-  // fetchUsers: () => dispatch(thunkFetchAllUsers())
 });
 
 export default connect(mSTP, mDTP)(VideoIndex);

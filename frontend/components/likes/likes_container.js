@@ -4,9 +4,11 @@ import LikesCount from "./likes";
 
 const mSTP = (state) => {
   return {
-    currentUserId: session.id,
+    currentUserId: state.session.id,
     currentUser: state.session.currentUser,
-    likes: 0,
+    like: {
+      like_num: 0
+    },
   };
 };
 
@@ -19,6 +21,6 @@ const mDTP = (dispatch) => {
 
 export default connect(mSTP, mDTP)(LikesCount);
 
-export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(CreateCommentForm)
-);
+// export default withRouter(
+//   connect(mapStateToProps, mapDispatchToProps)(CreateCommentForm)
+// );

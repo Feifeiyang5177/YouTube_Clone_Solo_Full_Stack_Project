@@ -16,9 +16,7 @@
 #
 class Like < ApplicationRecord
 
-  #validates :user_id, uniqueness: { scope: [:likeable_id, :likeable_type] }
-  #validates :version, inclusion: { in: %w(like dislike), 
-    #message: "%{value} is not a valid version, must be like or dislike"}
+ validates :user_id, :video_id, presence: true
 
   #belongs_to :likeable, polymorphic: true
   belongs_to :comment,

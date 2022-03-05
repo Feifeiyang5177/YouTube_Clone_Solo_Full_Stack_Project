@@ -4,8 +4,10 @@ import {FiThumbsUp, FiThumbsDown, FiMoreHorizontal} from "react-icons/fi";
 import {RiShareForwardLine} from "react-icons/ri";
 import CommentIndex from "../comments/comment_index_container";
 import NavBar from "../nav_bar/nav_bar_container";
+import LikesCount from "../likes/likes_container";
 import { Link } from "react-router-dom";
 // import SideBar from "../side_bar/side_bar";
+import Likes from "../likes/likes_container";
 
 
 
@@ -86,7 +88,6 @@ class VideoShow extends React.Component {
                       month: "short",
                       day: "2-digit",
                     }).format(oldTime)}
-                    
                   </div>
 
                   <div className="video-likes-icons">
@@ -94,7 +95,8 @@ class VideoShow extends React.Component {
                       <button
                         className="likes-button"
                         onClick={() =>
-                          this.setState({ likes: this.state.likes + 1 })
+                          this.setState({ likes: this.state.likes = 1,
+                          dislikes: this.state.dislikes = 0 })
                         }
                       >
                         <FiThumbsUp className="icon" />
@@ -106,7 +108,10 @@ class VideoShow extends React.Component {
                       <button
                         className="likes-button"
                         onClick={() =>
-                          this.setState({ dislikes: this.state.dislikes + 1 })
+                          this.setState({
+                            dislikes: this.state.dislikes = 1,
+                            likes: this.state.likes = 0
+                          })
                         }
                       >
                         <FiThumbsDown className="icon" />
@@ -154,6 +159,7 @@ class VideoShow extends React.Component {
                   <div className="comment-content">
                     <CommentIndex className="comment-content" />
                   </div>
+                  {/* <Likes /> */}
                 </div>
               </div>
             </div>
@@ -161,8 +167,13 @@ class VideoShow extends React.Component {
             <div className="show-page-video-index">
               <div className="show-page-video-lines">{videoIndex}</div>
             </div>
+
+            {/* <div className="show-page-video-index">
+              <div className="show-page-video-lines">
+                <Likes />
+              </div>
+            </div> */}
           </div>
-         
         );
     }
 }

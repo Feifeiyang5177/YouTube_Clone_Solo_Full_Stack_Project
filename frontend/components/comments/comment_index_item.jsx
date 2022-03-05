@@ -42,7 +42,12 @@ class CommentIndexItem extends React.Component {
               <div className="inner-content">
                 <button
                   className="comment-likes-button"
-                  onClick={() => this.setState({ likes: this.state.likes + 1 })}
+                  onClick={() =>
+                    this.setState({
+                      likes: (this.state.likes = 1),
+                      dislikes: (this.state.dislikes = 0),
+                    })
+                  }
                 >
                   <FiThumbsUp className="comment-icon" />
                 </button>
@@ -50,7 +55,10 @@ class CommentIndexItem extends React.Component {
                 <button
                   className="comment-likes-button"
                   onClick={() =>
-                    this.setState({ dislikes: this.state.dislikes + 1 })
+                    this.setState({
+                      dislikes: (this.state.dislikes = 1),
+                      likes: (this.state.likes = 0),
+                    })
                   }
                 >
                   <FiThumbsDown className="comment-icon" />

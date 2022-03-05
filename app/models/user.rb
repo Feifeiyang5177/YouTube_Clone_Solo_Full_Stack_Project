@@ -32,6 +32,10 @@ class User < ApplicationRecord
     has_many :comments,
     foreign_key: :commenter_id,
     class_name: :Comment
+
+    has_one :like, 
+    class_name: :Like, 
+    foreign_key: :user_id
     
     
 

@@ -23,7 +23,7 @@ class Video < ApplicationRecord
 
     has_many :likes,
     foreign_key: :video_id,
-    class_name: :Likes  
+    class_name: :Like  
 
     has_many :comments,
     foreign_key: :video_id,
@@ -35,13 +35,13 @@ class Video < ApplicationRecord
     foreign_key: :creator_id,
     class_name: :User 
 
-    def num_likes
-    self.likes.where(version: "like").length
-    end
+    # def num_likes
+    # self.likes.where(version: "like").length
+    # end
 
-    def num_dislikes
-    self.likes.where(version: "dislike").length
-    end
+    # def num_dislikes
+    # self.likes.where(version: "dislike").length
+    # end
 
     
 

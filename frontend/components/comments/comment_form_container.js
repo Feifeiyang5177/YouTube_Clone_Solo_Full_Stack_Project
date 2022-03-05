@@ -27,3 +27,5 @@ const mapDispatchToProps = (dispatch) => ({
 export default withRouter(
   connect(mapStateToProps, mapDispatchToProps)(CreateCommentForm)
 );
+
+// export default connect(mapStateToProps, mapDispatchToProps)(CreateCommentForm);

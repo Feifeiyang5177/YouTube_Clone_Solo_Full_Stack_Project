@@ -24,4 +24,4 @@ const mDTP = (dispatch) => ({
 }); 
 
 export default withRouter(connect(mSTP, mDTP)(CommentIndex));
-// export default connect(mSTP, mDTP)(CommentIndex);
+

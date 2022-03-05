@@ -1,25 +1,87 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
-import { useParams } from "react-router";
-import { NotiContext } from "../../context/noti_context";
-import Tooltip from "../tooltip/tooltip";
-import DislikeButton from "./dislike_button";
-import LikeButton from "./like_button";
+// import { useParams } from "react-router";
+// import { NotiContext } from "../../context/noti_context";
+// import Tooltip from "../tooltip/tooltip";
+// import DislikeButton from "./dislike_button";
+// import LikeButton from "./like_button";
+import { FiThumbsUp, FiThumbsDown, FiMoreHorizontal } from "react-icons/fi";
 
 
 class LikesCount extends React.Component {
-
-  constructor (props) {
-    super (props);
-    this.state = this.props.like
+  constructor(props) {
+    super(props);
+    this.state = this.props.like;
   }
 
-   changeLikeStatus = (type) => {
+  changeLikeStatus = (type) => {
     if (type === "like") setLikeStatus(1);
     if (type === "dislike") setLikeStatus(-1);
     if (type === "nolikes") setLikeStatus(0);
   };
 
+  changeLikeType(likeType) {
+    this.setState({ like: likeType });
+  }
 
+  handleLikes() {
+    // e.preventDefault();
+    const { currentUser } = this.props;
+
+    if (currentUser) {
+      this.props.createLike(this.state);
+      this.setState({ like_num: +1  });
+    } else {
+      this.props.history.push("/login");
+    }
+  }
+
+  handleDelete() {
+    this.props.deleteLike(this.props.like.id);
+  }
+
+  render() {
+    if (this.state === null) {
+      return null;
+    }
+
+    // const {
+    //   comments,
+    //   video,
+    //   updateComment,
+    //   deleteComment,
+    //   errors,
+    //   currentUser,
+    // } = this.props;
+
+    // const videoLikes = (likes || []).filter((like) => {
+    //   return like.video_id === video?.id;
+    // });
+    // let totalLikes = videoLikes.length;
+
+    // const { errors } = this.props;
+    // const submitButton = this.props.formType === "create" ? "COMMENT" : "EDIT";
+    // const submit =
+    //   this.props.formType === "create" ? this.handleSubmit : this.handleUpdate;
+
+    return (
+      <div className="v-s-p-likes-buttons">
+        <button
+          className="likes-button"
+          onClick={() => this.handleLikes()}
+        >
+          <FiThumbsUp className="icon" />
+        </button>
+        <button
+          className="likes-button"
+         onClick={() => this.handleDelete()}
+
+          // onClick={() => this.setState({ dislikes: this.state.dislikes + 1 })}
+        >
+          <FiThumbsDown className="icon" />
+        </button>
+      </div>
+    );
+  }
 }
 
 
