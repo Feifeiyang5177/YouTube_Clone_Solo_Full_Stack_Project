@@ -47,7 +47,4 @@ video6 = Video.create!(title: 'Erhu Playing Demo', creator_id: user1.id, descrip
 demo9  = URI.open('https://yatube-seeds.s3.amazonaws.com/demo9.MOV')
 video6.vd.attach(io: demo9, filename:'demo9.MOV')
 
-# video7 = Video.create!(title: 'Youtube Clone Show Page', creator_id: user1.id, description: "YaTube is a pixel perfect Youtube clone full stack project with Ruby on Rails on backend and React Redux on frontend. It incorporated Ruby, Rails, SQL, React, Redux, and JavaScript. 
-# It also included Google Login-like user authentication. This is the video show page on the app.", view_count: 16)
-# yatubegif2 = URI.open('https://yatube-seeds.s3.amazonaws.com/yatubegif2.mov')
-# video7.vd.attach(io: yatubegif2, filename:'yatubegif2.mov')
+
