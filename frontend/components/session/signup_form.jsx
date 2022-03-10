@@ -37,7 +37,7 @@ class Signup extends React.Component {
   loginDemo() {
     this.props
       .login({
-        username: "DemoUser",
+        username: "DemoUser 演示者",
         email: "user5@gmail.com",
         password: "555555",
       })
