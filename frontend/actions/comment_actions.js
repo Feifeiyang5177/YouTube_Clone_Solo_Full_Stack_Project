@@ -42,6 +42,8 @@ export const clearCommentErrors = () => ({
   type: CLEAR_COMMENT_ERRORS,
 });
 
+
+
 export const thunkFetchComments = () => (dispatch) => {
   return commentAPIUtil
     .apiReceiveAllComments()

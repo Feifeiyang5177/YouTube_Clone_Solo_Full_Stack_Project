@@ -5,6 +5,7 @@ import {BiVideoPlus} from "react-icons/bi";
 import {CgProfile} from "react-icons/cg";
 import SearchBar from "./search_bar";
 import MenuBar from './menu_bar';
+// import Upload from "../nav_bar/video_upload";
 
 export default ({ currentUser, logout, videos, fetchVideos }) => {
 const display = currentUser ? (
@@ -44,9 +45,10 @@ const display = currentUser ? (
       <SearchBar />
 
       <div className="camera-icon-and-session-btn">
-       
-          <BiVideoPlus className="camera-icon"  />
       
+          <BiVideoPlus className="camera-icon" />
+       
+
         {display}
       </div>
     </div>

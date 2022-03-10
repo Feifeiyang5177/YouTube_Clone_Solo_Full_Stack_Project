@@ -1,13 +1,14 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import { FiThumbsUp, FiThumbsDown, FiMoreHorizontal } from "react-icons/fi";
+import { RiThumbUpFill, RiThumbDownFill } from "react-icons/ri";
 class CommentIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      likes: 0,
-      dislikes: 0,
-    }; 
+      likes: "",
+      dislikes: "",
+    };
     this.handleEdit = this.handleEdit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
   }
@@ -19,6 +20,31 @@ class CommentIndexItem extends React.Component {
 
   handleDelete() {
     this.props.deleteComment(this.props.comment.id);
+  }
+
+  getLikeIconClasses() {
+    return this.state.likes === "" ? (
+      <div>
+       
+        <FiThumbsUp className="comment-icon" />
+      </div>
+    ) : (
+      <div>
+        <RiThumbUpFill className="comment-icon" />
+      </div>
+    );
+  }
+
+  getDislikeIconClasses() {
+    return this.state.dislikes === "" ? (
+      <div>
+        <FiThumbsDown className="comment-icon" />
+      </div>
+    ) : (
+      <div>
+        <RiThumbDownFill className="comment-icon" />
+      </div>
+    );
   }
 
   render() {
@@ -41,29 +67,32 @@ class CommentIndexItem extends React.Component {
             <div className="comment-likes">
               <div className="inner-content">
                 <button
-                  className="comment-likes-button"
+                  className="comment-likes-button-1"
                   onClick={() =>
                     this.setState({
-                      likes: (this.state.likes = 1),
-                      dislikes: (this.state.dislikes = 0),
+                      likes: 1,
+                      dislikes: "",
                     })
                   }
                 >
-                  <FiThumbsUp className="comment-icon" />
+                  {this.getLikeIconClasses()}
+                  {/* <FiThumbsUp className="comment-icon" /> */}
                 </button>
+
                 <div className="likes-num">{this.state.likes}</div>
                 <button
-                  className="comment-likes-button"
+                  className="comment-likes-button-2"
                   onClick={() =>
                     this.setState({
-                      dislikes: (this.state.dislikes = 1),
-                      likes: (this.state.likes = 0),
+                      dislikes: 1,
+                      likes: "",
                     })
                   }
                 >
-                  <FiThumbsDown className="comment-icon" />
+                  {/* <FiThumbsDown className="comment-icon" /> */}
+                  {this.getDislikeIconClasses()}
                 </button>
-                <div className="likes-num">{this.state.dislikes} </div>
+                <div className="likes-num">{this.state.dislikes}</div>
               </div>
 
               {/* if currentUser, check the id, if not, ignor it.  */}

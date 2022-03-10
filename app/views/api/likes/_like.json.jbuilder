@@ -1,3 +1,3 @@
 json.extract! @like, :id, :user_id, :video_id, :comment_id
-json.user like.user
+json.liker like.liker
 json.video like.video  

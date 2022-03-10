@@ -22,7 +22,9 @@ export default () => (
       <AuthRoute exact path="/signup" component={SignupContainer} />
       <Route exact path="/" component={VideoIndexContainer} />
       <Route exact path="/search" component={VideoIndexContainer} />
+      <Route exact path="/video/:videoId" component={VideoShowContainer} />
       <Route exact path="/videos/:videoId" component={VideoShowContainer} />
+      {/* <Route exact path="/video/:videoId" component={VideoShowContainer} /> */}
       <Route
         exact
         path="/comments/:commentId/edit"

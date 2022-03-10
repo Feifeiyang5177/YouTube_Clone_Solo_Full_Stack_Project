@@ -1,26 +1,33 @@
 import { connect } from "react-redux";
-import { createLike, deleteLike } from "../../actions/likes_action";
+import {
+  thunkFetchLikes,
+  thunkDeleteLike,
+  thunkFetchLike,
+  thunkCreateLike,
+} from "../../actions/likes_action";
 import LikesCount from "./likes";
+import { withRouter } from "react-router";
 
-const mSTP = (state) => {
+const mSTP = (state, ownProps) => {
   return {
     currentUserId: state.session.id,
     currentUser: state.session.currentUser,
     like: {
-      like_num: 0
+      like_num: 0,
+      video_id: ownProps.match.params.videoId,
+      user_id: state.session?.currentUser?.id,
+      // comment_id: ownProps.match.params.commentId
     },
   };
 };
 
 const mDTP = (dispatch) => {
   return {
-    createLike: (like) => dispatch(createLike(like)),
-    deleteLike: (likeId) => dispatch(deleteLike(likeId)),
+    fetchLikes: () => dispatch(thunkFetchLikes()),
+    deleteLike: (likeId) => dispatch(thunkDeleteLike(likeId)),
+    fetchLike: (likeId) => dispatch(thunkFetchLike(likeId)),
+    createLike: (like) => dispatch(thunkCreateLike(like)),
   };
 };
 
-export default connect(mSTP, mDTP)(LikesCount);
-
-// export default withRouter(
-//   connect(mapStateToProps, mapDispatchToProps)(CreateCommentForm)
-// );
+export default withRouter(connect(mSTP, mDTP)(LikesCount));

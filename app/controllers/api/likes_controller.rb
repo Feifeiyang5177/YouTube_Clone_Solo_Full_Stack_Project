@@ -11,6 +11,15 @@ class Api::LikesController < ApplicationController
   #     render json: @like.errors.full_messages, status: :unprocessable_entity
   #   end
   # end
+    def index
+        @likes = Like.all
+        render :index
+    end
+
+    def show 
+        @like = Like.find(params[:id])
+        render :show
+    end
 
   def create
         @like = Like.new(like_params)

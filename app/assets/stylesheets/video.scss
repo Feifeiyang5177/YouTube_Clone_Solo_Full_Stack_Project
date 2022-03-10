@@ -210,6 +210,8 @@
                                 height: 3vh;
                                 color: rgb(10, 10, 10);
                             }
+                          
+
                             .inner-content{
                                 display: flex;
                                 justify-content: space-between;
@@ -441,19 +443,35 @@
 
         }
 
-        .comment-likes-button{
+        .comment-likes-button-1{
             text-decoration: none;
             border: none;
             background-color: transparent;
             color: #686767;
+            width: 3vw;
+            padding-right: 10px;
         }
+        .comment-likes-button-2{
+            text-decoration: none;
+            border: none;
+            background-color: transparent;
+            color: #686767;
+            width: 3vw;
+            padding-left: 10px;
+        }
+
         .comment-likes-button:hover{
             color: black;
         }
         .comment-icon {
-            width: 15px;
-            height: 15px;
+            width: 2vw;
+            height: 2vh;
         }
+        //  .icon{
+        //                         width: 5vw; 
+        //                         height: 3vh;
+        //                         color: rgb(10, 10, 10);
+        //                     }
 
         .comment-btn{
             text-decoration: none;

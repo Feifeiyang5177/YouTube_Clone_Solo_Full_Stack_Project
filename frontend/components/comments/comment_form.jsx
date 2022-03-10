@@ -84,7 +84,7 @@ class CreateCommentForm extends React.Component {
           <button className="actual-button-comment" type="submit">
             {submitButton}
           </button>
-          <button className="actual-button-cancel">CANCEL</button>
+          <button className="actual-button-cancel" >CANCEL</button>
         </div>
       </form>
     );
