@@ -1,5 +1,6 @@
 import React, {useState}  from "react";
 import { BiVideoPlus } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 export default class Upload extends React.Component {
   constructor(props) {
@@ -36,17 +37,21 @@ export default class Upload extends React.Component {
 
     return (
       <div>
-        <BiVideoPlus onClick={showSidebar} />
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Upload a file: <br />
+        <Link to="/upload">
+          {/* <BiVideoPlus onClick={showSidebar} /> */}
+         <BiVideoPlus /> 
+          </Link>
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              Upload a file: <br />
+              <br />
+              <input type="file" name="file" onChange={this.onChangeHandler} />
+            </label>
             <br />
-            <input type="file" name="file" onChange={this.onChangeHandler} />
-          </label>
-          <br />
-          <br />
-          <button type="submit">Upload</button>
-        </form>
+            <br />
+            <button type="submit">Upload</button>
+          </form>
+        {/* </Link> */}
       </div>
     );
   }

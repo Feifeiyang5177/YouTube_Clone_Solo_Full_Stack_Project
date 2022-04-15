@@ -35,9 +35,11 @@ class CreateCommentForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const { currentUser} = this.props;
-
+    // debugger
     if (currentUser) {
-      this.props.createComment(this.state);
+      const newComment = this.state;
+      newComment.video_id = parseInt(this.props.videoId);
+      this.props.createComment(newComment);
       this.setState({ body: "" });
     } else {
       this.props.history.push("/login");

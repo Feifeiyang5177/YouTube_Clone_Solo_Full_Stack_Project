@@ -9,7 +9,7 @@ import {
  
 const mSTP = (state, ownProps) => ({
   video: state.entities.videos[ownProps.match.params.videoId],
-  // videoId: 
+  videoId: ownProps.match.params.videoId,
   videos: Object.values(state.entities.videos),
   currentUser: state.session.currentUser,
   users: state.entities.users

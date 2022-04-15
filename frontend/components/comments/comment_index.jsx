@@ -45,7 +45,7 @@ class CommentIndex extends React.Component {
     ) : (
       <div className="comment-title"></div>
     );
-
+ 
     return (
       <div className="comments-container">
         <div className="total-comments">
@@ -61,6 +61,7 @@ class CommentIndex extends React.Component {
               className="input-box-and-buttons"
               video={video}
               currentUser={currentUser}
+              videoId={this.props.videoId}
             />
           </div>
         </div>

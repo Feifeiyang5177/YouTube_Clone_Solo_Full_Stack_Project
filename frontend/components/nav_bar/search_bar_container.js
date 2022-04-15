@@ -6,6 +6,7 @@ const mapStateToProps = (state) => {
   return {
     currentUser: state.session.currentUser,
     videos: Object.values(state.entities.videos),
+    filters: state.filters
   };
 };
  

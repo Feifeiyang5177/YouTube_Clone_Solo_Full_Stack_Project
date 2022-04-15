@@ -93,7 +93,7 @@ class Login extends React.Component {
             <Link className="signup-link" to="/signup">
               Create Account
             </Link>
-            {/* <div> or </div> */}
+        
             <button className="login-page-demo-user" onClick={this.loginDemo}>
               Demo Login
             </button>

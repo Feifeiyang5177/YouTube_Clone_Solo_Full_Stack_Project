@@ -6,9 +6,10 @@ import CommentIndex from "../comments/comment_index_container";
 import NavBar from "../nav_bar/nav_bar_container";
 // import LikesCount from "../likes/likes_container";
 import { Link } from "react-router-dom";
+
 // import SideBar from "../side_bar/side_bar";
 // import Likes from "../likes/likes_container";
-// import Upload from "../nav_bar/video_upload";
+import Upload from "../nav_bar/video_upload";
 import { RiThumbUpFill, RiThumbDownFill } from "react-icons/ri";
 // import VideoIndexItem from "./video_index_item";
 // import VideoShowSideIndex from "./video_show_side_index"
@@ -160,7 +161,7 @@ class VideoShow extends React.Component {
               </div>
             </div>
           </div>
-
+ 
           <div className="video-description-section">
             <div className="v-d-s-1">
               <img className="user-profile-img" src={window.userProfile2URL} />
@@ -183,10 +184,10 @@ class VideoShow extends React.Component {
 
             <div className="v-d-s-2">
               <div className="comment-content">
-                <CommentIndex className="comment-content" />
+                <CommentIndex className="comment-content" videoId={this.props.videoId}/>
               </div>
               {/* <Likes /> */}
-              {/* <Upload /> */}
+              {<Upload />}
             </div>
           </div>
         </div>
@@ -196,7 +197,6 @@ class VideoShow extends React.Component {
         {/* <div className="show-page-video-index">
           <div className="show-page-video-lines"><VideoShowSideIndex videoId={video.id}/></div>
         </div> */}
-        
       </div>
     );
   }

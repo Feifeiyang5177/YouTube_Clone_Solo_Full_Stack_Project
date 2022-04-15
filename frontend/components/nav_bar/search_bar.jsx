@@ -2,109 +2,20 @@ import React, { useState } from "react";
 import { AiOutlineSearch} from "react-icons/ai";
 import {GrClose} from "react-icons/gr";
 import { Link } from "react-router-dom";
+import SearchResult from "./search_result";
+import debounce from "lodash.debounce";
 
 
-
-// class SearchBar extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = { value: "" };
-
-//     this.handleChange = this.handleChange.bind(this);
-//     this.handleSubmit = this.handleSubmit.bind(this);
-//   }
-// //   componentDidMount() {
-// //     this.props.fetchVideos();
-// //   }
-
-//   handleChange(event) {
-//     this.setState({ value: event.target.value });
-//   }
-
-//   handleSubmit(event) {
-//     alert("A name was submitted: " + this.state.value);
-//     event.preventDefault();
-//   }
-
-//   render() {
-//     const {videos} = this.props
-//     const vd = (videos || []).map((video, key) => {
-//       return (
-//       video={video}, 
-//       key={key}
-//       );
-//     });
-//     return (
-//       <div className="search-bar-and-icon">
-//         <form className="search-bar" onSubmit={this.handleSubmit}>
-//           <label>
-//             <input
-//               className="search-input"
-//               type="text"
-//               placeholder="Search"
-//               value={this.state.value}
-//               onChange={this.handleChange}
-//             />
-//           </label>
-//           <button className="search-button">
-//             <AiOutlineSearch className="search-icon" />{" "}
-//           </button>
-//           {/* <input className="search-button" type="submit" value="Submit" 
-//           /> */}
-//         </form>
-//         <div className="loppping-video-names">{vd.title}</div>
-//       </div>
-//     );
-//   }
-// }
-
-// export default SearchBar
- 
-// class SearchBar extends React.Component{
-//     constructor(props){
-//         super(props);
-//     }
-//     changeSearch(e){
-//         this.setState({filter: e.currentTarget.value})
-//     }
-//     render(){
-//         const {videos} = this.props;
-//         const names = [
-//           "Introduction",
-//           "Maleficent Trailer",
-//           "Summer"
-//         ];
-//         // const vNames = (videos || []).map((vid, idx) => {
-//         //     return (
-//         //         <div>{vid.title}</div>
-//         //     )
-//         // })
-
-//         return (
-//           <div className="search-bar-and-icon">
-//             <div className="search-bar">
-//               <input
-//                 placeholder="Search"
-//                 className="search-input"
-//                 type="text"
-//                 onChange={(e) => this.changeSearch(e)}
-//               />
-
-//               <Link className="search-button" to="/search">
-//                 <AiOutlineSearch className="search-icon" />{" "}
-               
-//               </Link>
-//             </div>
-//           </div>
-//         );
-//     }
-// }
-
-// export default SearchBar
-
-function SearchBar (){
-
-    const names = ["Introduction", "Maleficent Trailer", "Summer" ];
+function SearchBar ({videos}){
+    
+    const names = [
+      "Summer",
+      "Introduction",
+      "Maleficent Trailer",
+      "Voice Recognition MERN Project",
+      "Youtube Clone Longin and Signup",
+      "Erhu Playing Demo",
+    ];
     const [state, setState] = useState([]);
     const [wordEntered, setWordEntered] = useState("")
 
@@ -128,7 +39,7 @@ function SearchBar (){
     };
 
     const handleClick = () => {
-        <div>Invalid search</div>;
+        return (<div>Invalid search</div>)
     }
        
     return (
@@ -176,4 +87,115 @@ function SearchBar (){
 }
 
 export default SearchBar
+
+
+
+// class SearchBar extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       title: "",
+//       video: {},
+//       hideFilters: true,
+//       showSubmit: false,
+//     };
+//     this.update.bind(this);
+   
+//   }
+
+//   update(field) {
+//     return (e) => {
+//       this.setState(
+//         {
+//           [field]: e.currentTarget.value,
+//           showSubmit: false,
+//         }
+//         // () => {
+//         //   this.debounce();
+//         // }
+//       );
+//     };
+//   }
+
+
+
+//   changeSearchBar(video) {
+//     if (this.state.title !== video.title) {
+//       this.setState({
+//         title: video.title,
+//         video: video,
+//         showSubmit: true,
+//       });
+//     } else {
+//       this.setState({
+//         title: "",
+//         video: {},
+//         hideFilters: false,
+//         showSubmit: false,
+//       });
+//     }
+//   }
+
+  
+
+//   //  handleFilter(event)  {
+//   //         const searchWord = event.target.value;
+//   //         setWordEntered(searchWord);
+//   //         const newFilter = names.filter((value) => {
+//   //             return value.toLowerCase().includes(searchWord.toLowerCase());
+//   //         })
+//   //         if (searchWord === "") {
+//   //                 setState([])
+//   //             }
+//   //             else {setState(newFilter)}
+//   //           }
+
+//    clearInput () {
+//           setState([]);
+//           setWordEntered("")
+//       };
+
+//   render() {
+//     const { videos } = this.props;
+//     const allVideos = (videos || []).map((video) => {
+//       <SearchResult key={video.id} video={video} creator={video.creator}/>
+//       // <div>{video}</div>;
+//     });
+
+//     return (
+//       <div>
+//         <div className="search-bar">
+//           <input
+//             placeholder="Search"
+//             className="search-input"
+//             type="text"
+//             value={this.state.title}
+//             onChange={this.update("title")}
+//           />
+
+//           <div className="search-bar-icons">
+//             {this.state.title == 0 ? (
+//               <button className="search-button"  >
+//                 <AiOutlineSearch className="search-icon" />
+//               </button>
+//             ) : (
+//               <div className="search-button-and-close-icon">
+//                 <GrClose className="search-close-icon" />
+//                 <Link className="search-button" to="/search">
+//                   <AiOutlineSearch className="search-icon" />
+//                 </Link>
+               
+//               </div>
+             
+//             )}
+//           </div>
+//         </div>
+
+//         <div>{allVideos}</div>
+//       </div>
+//     );
+//   }
+// }
+
+// export default SearchBar;
 
