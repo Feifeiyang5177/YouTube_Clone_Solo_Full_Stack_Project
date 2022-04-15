@@ -24,6 +24,7 @@ export default () => (
       <Route exact path="/" component={VideoIndexContainer} />
       {/* <Route exact path="/search" component={SearchBar} /> */}
       <Route exact path="/search" component={VideoIndexContainer} />
+      
       <Route exact path="/upload" component={Upload} />
       <Route exact path="/videos/:videoId" component={VideoShowContainer} />
       <Route
