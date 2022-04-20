@@ -187,7 +187,7 @@ class VideoShow extends React.Component {
                 <CommentIndex className="comment-content" videoId={this.props.videoId}/>
               </div>
               {/* <Likes /> */}
-              {<Upload />}
+              {/* {<Upload />} */}
             </div>
           </div>
         </div>
