@@ -37,7 +37,7 @@ YaTube is a clone website which is based on the most popular video sharing websi
 - Videos:  
   - Videos' index page displays a list of uploaded videos.
   - Video' show page displays a specific video that user choose to watch.
-![](/app/assets/images/video_show.png)
+![](/app/assets/images/video_showpage.png)
 
 - Comments:
   - Logged in users can leave comments, edit, and delete comments on their favorite videos.
