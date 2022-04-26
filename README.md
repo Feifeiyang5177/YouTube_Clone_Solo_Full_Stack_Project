@@ -32,21 +32,24 @@ YaTube is a clone website which is based on the most popular video sharing websi
 - User Auth:
   - Users can sign up create their accounts, sign in, log out on the site.
   - Users can also use demo user mode logging in to try the site.
-  
  ![](https://yatube-seeds.s3.amazonaws.com/login.gif)
 
 - Videos:  
   - Videos' index page displays a list of uploaded videos.
-![](/app/assets/images/video_index.png)
-
-
   - Video' show page displays a specific video that user choose to watch.
 ![](/app/assets/images/video_show.png)
 
 - Comments:
   - Logged in users can leave comments, edit, and delete comments on their favorite videos.
+  ![](/app/assets/images/comment.png)
+  
+- Search:
+  - Users can use the search bar to search for videos.
+  ![](/app/assets/images/searchbar.png) 
 
-- Users can easily navigate to the videos' index page with the YaTube logo on top left as well as the home icon on the side bar. 
+- Navigation:
+  - Users can easily navigate to the videos' index page with the YaTube logo on top left as well as the home icon on the side bar. 
+  - ![](/app/assets/images/sidebar.png)
 
 ## Implimentation
 
