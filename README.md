@@ -4,7 +4,7 @@ YaTube is a clone website which is based on the most popular video sharing websi
 
 [Check Out YaTube Live](https://yatube-video-app.herokuapp.com/#/videos)
 
- ![login](https://yatube-seeds.s3.amazonaws.com/login.gif)
+ ![](https://yatube-seeds.s3.amazonaws.com/login.gif)
 
 ## Technology
 
