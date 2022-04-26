@@ -1,4 +1,6 @@
-# YaTube Video App
+## YaTube Video App
+
+---
 
 YaTube is a clone website which is based on the most popular video sharing website --- YouTube. This web app allows users to create accounts, to view the full page of videos, and to pick a specific video to watch.
 
@@ -7,6 +9,8 @@ YaTube is a clone website which is based on the most popular video sharing websi
 <img width="1920" alt="main_page" src="/app/assets/images/video_index.png">
 
 ## Technology
+
+---
 
 - React
 - Redux
@@ -23,6 +27,8 @@ YaTube is a clone website which is based on the most popular video sharing websi
 
 ## Core Features 
 
+---
+
 - User Auth:
   - Users can sign up create their accounts, sign in, log out on the site.
   - Users can also use demo user mode logging in to try the site.
@@ -36,6 +42,9 @@ YaTube is a clone website which is based on the most popular video sharing websi
 
   - Video' show page displays a specific video that user choose to watch.
 ![](/app/assets/images/video_show.png)
+
+- Comments:
+  - Logged in users can leave comments, edit, and delete comments on their favorite videos.
 
 - Users can easily navigate to the videos' index page with the YaTube logo on top left as well as the home icon on the side bar. 
 
