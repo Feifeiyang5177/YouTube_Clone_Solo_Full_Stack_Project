@@ -126,9 +126,7 @@ YaTube is a clone website which is based on the most popular video sharing websi
     
 ## Future Features
 
-- Like and dislike a video
-- Comment on videos
-- Subscribe a creator
+- Voice search bar
 - Upload and delete a video
 
 ## Credit
