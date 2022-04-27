@@ -35,8 +35,9 @@ YaTube is a clone website which is based on the most popular video sharing websi
 - User Auth:
   - Users can sign up create their accounts, sign in, log out on the site.
   - Users can also use demo user mode logging in to try the site.
- ![](https://yatube-seeds.s3.amazonaws.com/login.gif)
-<!--   <img width="1280" alt="user_auth" src="https://user-images.githubusercontent.com/75951481/165427962-8f144988-8923-425f-b7c7-fcaa55754f23.png”> -->
+<!--  ![](https://yatube-seeds.s3.amazonaws.com/login.gif) -->
+
+<img width="1280" alt="user_auth" src="https://user-images.githubusercontent.com/75951481/165427962-8f144988-8923-425f-b7c7-fcaa55754f23.png">
 
 - Videos:  
   - Videos' index page displays a list of uploaded videos.
