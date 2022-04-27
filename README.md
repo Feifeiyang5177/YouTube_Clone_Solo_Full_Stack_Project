@@ -4,6 +4,8 @@ YaTube is a clone website which is based on the most popular video sharing websi
 
 [Check Out YaTube Live](https://yatube-video-app.herokuapp.com/#/videos)
 
+<img width="1920" alt="main_page" src="/app/assets/images/video_index.png">
+
 ## Technology
 
 - React

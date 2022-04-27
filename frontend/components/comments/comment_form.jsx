@@ -10,6 +10,7 @@ class CreateCommentForm extends React.Component {
     this.handleUpdate = this.handleUpdate.bind(this);
     this.updateContent = this.updateContent.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
+    this.handleCancle = this.handleCancle.bind(this);
   }
   componentDidMount() {
     this.props.clearErrors();
@@ -34,7 +35,7 @@ class CreateCommentForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const { currentUser} = this.props;
+    const { currentUser } = this.props;
     // debugger
     if (currentUser) {
       const newComment = this.state;
@@ -43,19 +44,33 @@ class CreateCommentForm extends React.Component {
       this.setState({ body: "" });
     } else {
       this.props.history.push("/login");
-    } 
+    }
   }
 
   updateContent(e) {
     e.preventDefault();
     this.setState({ body: e.target.value });
   }
-  
+
   handleUpdate(e) {
     e.preventDefault();
+    // debugger
     this.props
       .updateComment(this.state)
-      .then(() => this.props.history.push(`/videos/${this.props.comment.video_id}`));
+      .then(() =>
+        this.props.history.push(`/videos/${this.props.comment.video_id}`)
+      );
+  }
+
+  handleCancle(e) {
+    e.preventDefault();
+    const { currentUser } = this.props;
+    // debugger
+    if (currentUser) {
+      this.setState({ body: "" });
+    } else {
+      this.props.history.push("/login");
+    }
   }
 
   render() {
@@ -63,8 +78,7 @@ class CreateCommentForm extends React.Component {
       return null;
     }
     const { errors } = this.props;
-    const submitButton =
-      this.props.formType === "create" ? "COMMENT" : "EDIT";
+    const submitButton = this.props.formType === "create" ? "COMMENT" : "EDIT";
     const submit =
       this.props.formType === "create" ? this.handleSubmit : this.handleUpdate;
 
@@ -86,7 +100,7 @@ class CreateCommentForm extends React.Component {
           <button className="actual-button-comment" type="submit">
             {submitButton}
           </button>
-          <button className="actual-button-cancel" >CANCEL</button>
+          <button className="actual-button-cancel" onClick={this.handleCancle}>CANCEL</button>
         </div>
       </form>
     );

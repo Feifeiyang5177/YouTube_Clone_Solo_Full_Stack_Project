@@ -24,18 +24,19 @@ export default () => (
       <Route exact path="/" component={VideoIndexContainer} />
       {/* <Route exact path="/search" component={SearchBar} /> */}
       <Route exact path="/search" component={VideoIndexContainer} />
-      
+
       <Route exact path="/upload" component={Upload} />
       <Route exact path="/videos/:videoId" component={VideoShowContainer} />
-      <Route
+      {/* <Route
         exact
         path="/comments/:commentId/edit"
         component={VideoIndexContainer}
-      />
+      /> */}
       <ProtectedRoute
         exact
         path="/comments/edit/:commentId"
         component={UpdateCommentContainer}
+        
       />
     </Switch>
   </div>
