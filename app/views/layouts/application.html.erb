@@ -2,7 +2,23 @@
 <html>
   <head>
     <title>YaTube</title>
+    <%= favicon_link_tag asset_path('logo2.png') %>
     <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+      <meta property="og:title" content="YaTube" />
+     <meta property='og:image' content="<%= image_url('yatube_homepage.png') %>"/>
+     <meta property="og:description"
+       content="YaTube is a pixel-perfect clone of YouTube. 
+       Users can view videos uploaded by other users, as well as 
+       comment and like on videos."
+     />
+     <meta property="og:url"
+       content="https://yatube-video-app.herokuapp.com/#/"
+     />
+
+
+
+
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <link rel="preconnect" href="https://fonts.googleapis.com">
