@@ -6,9 +6,9 @@ YaTube is a clone website which is based on the most popular video sharing websi
 
 [Check Out YaTube Live](https://yatube-video-app.herokuapp.com/#/videos)
 
-<!-- <img width="1920" alt="main_page" src="/app/assets/images/video_index.png"> -->
+![intro_page](https://user-images.githubusercontent.com/75951481/165430453-5d2d7b7b-c63c-4298-a850-4f09457f3ab4.gif)
 
-<img width="1226" alt="yatube_homepage" src="https://user-images.githubusercontent.com/75951481/165418678-477b19f4-d89f-4e28-bd13-3b3d0d5538d9.png">
+<!-- <img width="1226" alt="yatube_homepage" src="https://user-images.githubusercontent.com/75951481/165418678-477b19f4-d89f-4e28-bd13-3b3d0d5538d9.png"> -->
 
 
 ## Technology
@@ -36,23 +36,28 @@ YaTube is a clone website which is based on the most popular video sharing websi
   - Users can sign up create their accounts, sign in, log out on the site.
   - Users can also use demo user mode logging in to try the site.
  ![](https://yatube-seeds.s3.amazonaws.com/login.gif)
+<!--   <img width="1280" alt="user_auth" src="https://user-images.githubusercontent.com/75951481/165427962-8f144988-8923-425f-b7c7-fcaa55754f23.png”> -->
 
 - Videos:  
   - Videos' index page displays a list of uploaded videos.
   - Video' show page displays a specific video that user choose to watch.
-![](/app/assets/images/video_showpage.png)
+<!-- ![](/app/assets/images/video_showpage.png) -->
+![video_showpage](https://user-images.githubusercontent.com/75951481/165426005-a3955d08-b2c0-418a-815d-ffc77ab64020.gif)
 
 - Comments:
   - Logged in users can leave comments, edit, and delete comments on their favorite videos.
-  ![](/app/assets/images/comment.png)
+<!--   ![](/app/assets/images/comment.png) -->
+  ![comment](https://user-images.githubusercontent.com/75951481/165425988-2475e425-1c2d-4e09-87db-0a72bac362ad.gif)
   
 - Search:
   - Users can use the search bar to search for videos.
-  ![](/app/assets/images/searchbar.png) 
+<!--   ![](/app/assets/images/searchbar.png)  -->
+  ![search_bar](https://user-images.githubusercontent.com/75951481/165425994-9750964e-c899-46b2-af72-3f35efd4045a.gif)
 
 - Navigation:
   - Users can easily navigate to the videos' index page with the YaTube logo on top left as well as the home icon on the side bar. 
-  - ![](/app/assets/images/sidebar.png)
+<!--   - ![](/app/assets/images/sidebar.png) -->
+  ![sidebar](https://user-images.githubusercontent.com/75951481/165425998-861537a8-6d37-4068-b5e0-700a18500fa2.gif)
 
 ## Implimentation
 
